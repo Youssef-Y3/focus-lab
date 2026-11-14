@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#10283a" name="theme-color"/>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="FOCUS LAB × TAFRA OS — مساحة متكاملة للتعلم وإدارة التركيز والتنفيذ وصناعة المحتوى والبحث." name="description"/>
+<title>FOCUS LAB × TAFRA OS</title>
+<link href="assets/app.css" rel="stylesheet"/>
+<link href="assets/modern.css" rel="stylesheet"/></head>
+<body>
+<!-- Feather Icons SVG Sprite -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <defs>
+    <!-- Home Icon -->
+    <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+      <polyline points="9 22 9 12 15 12 15 22"/>
+    </symbol>
+
+    <!-- Graduation / Student Icon -->
+    <symbol id="icon-graduation" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+      <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+    </symbol>
+
+    <!-- Book Icon -->
+    <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+    </symbol>
+
+    <!-- Tool Icon -->
+    <symbol id="icon-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+    </symbol>
+
+    <!-- Compass / Journey Icon -->
+    <symbol id="icon-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+    </symbol>
+
+    <!-- Award / Mastery Icon -->
+    <symbol id="icon-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="8" r="7"/>
+      <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+    </symbol>
+
+    <!-- Zap / Tafra Icon -->
+    <symbol id="icon-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </symbol>
+
+    <!-- Star / Be Tafra Icon -->
+    <symbol id="icon-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    </symbol>
+
+    <!-- Search / Research Icon -->
+    <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"/>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </symbol>
+
+    <!-- Archive Icon -->
+    <symbol id="icon-archive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="21 8 21 21 3 21 3 8"/>
+      <rect x="1" y="3" width="22" height="5"/>
+      <line x1="10" y1="12" x2="14" y2="12"/>
+    </symbol>
+
+    <!-- Settings Icon -->
+    <symbol id="icon-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+    </symbol>
+
+    <!-- Maximize Icon -->
+    <symbol id="icon-maximize" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+    </symbol>
+
+    <!-- Minimize Icon -->
+    <symbol id="icon-minimize" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 14h6v6m10-10h-6V4m0 6l7-7M10 14l-7 7"/>
+    </symbol>
+
+    <!-- Volume Icon -->
+    <symbol id="icon-volume" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+    </symbol>
+
+    <!-- Volume X Icon -->
+    <symbol id="icon-volume-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+      <line x1="23" y1="9" x2="17" y2="15"/>
+      <line x1="17" y1="9" x2="23" y2="15"/>
+    </symbol>
+
+    <!-- Sun Icon -->
+    <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"/>
+      <line x1="12" y1="1" x2="12" y2="3"/>
+      <line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/>
+      <line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </symbol>
+
+    <!-- Moon Icon -->
+    <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </symbol>
+
+    <!-- 3D Box Icon -->
+    <symbol id="icon-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+      <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+      <line x1="12" y1="22.08" x2="12" y2="12"/>
+    </symbol>
+
+    <!-- Close X Icon -->
+    <symbol id="icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"/>
+      <line x1="6" y1="6" x2="18" y2="18"/>
+    </symbol>
+  </defs>
+</svg>
+
+
+<div class="app-shell">
+<nav class="floating-nav glass-morph" id="sidebar">
+  <button class="radial-center-trigger" id="radialToggleBtn" aria-label="تبديل القائمة الدائرية" title="فتح / إغلاق القائمة">
+    <div class="radial-pulse-ring"></div>
+    <div class="radial-core-glow"></div>
+    <span class="radial-trigger-icon">
+      <svg class="feather-icon trigger-open"><use xlink:href="#icon-compass"/></svg>
+      <svg class="feather-icon trigger-close"><use xlink:href="#icon-x"/></svg>
+    </span>
+  </button>
+  <div class="radial-menu-items" id="radialMenuItems">
+    <button class="nav-item radial-btn active" data-page="overview" data-tooltip="الرئيسية" title="الرئيسية">
+      <svg class="feather-icon"><use xlink:href="#icon-home"/></svg>
+      <span class="radial-tooltip">الرئيسية</span>
+    </button>
+    <button class="nav-item radial-btn" data-page="student" data-tooltip="بوابة شباب الجامعة" title="بوابة شباب الجامعة">
+      <svg class="feather-icon"><use xlink:href="#icon-graduation"/></svg>
+      <span class="radial-tooltip">بوابة شباب الجامعة</span>
+    </button>
+    <button class="nav-item radial-btn" data-page="learn" data-tooltip="FOCUS LEARN" title="FOCUS LEARN">
+      <svg class="feather-icon"><use xlink:href="#icon-book"/></svg>
+      <span class="radial-tooltip">FOCUS LEARN</span>
+    </button>
+    <button class="nav-item radial-btn" data-page="tools" data-tooltip="FOCUS TOOLS" title="FOCUS TOOLS">
+      <svg class="feather-icon"><use xlink:href="#icon-tool"/></svg>
+      <span class="radial-tooltip">FOCUS TOOLS</span>
+    </button>
+    <button class="nav-item radial-btn" data-page="journey" data-tooltip="رحلة 28 يومًا" title="رحلة 28 يومًا">
+      <svg class="feather-icon"><use xlink:href="#icon-compass"/></svg>
+      <span class="radial-tooltip">رحلة 28 يومًا</span>
+    </button>
+    <button class="nav-item radial-btn" data-page="mastery" data-tooltip="MASTERY OS" title="MASTERY OS">
+      <svg class="feather-icon"><use xlink:href="#icon-award"/></svg>
+      <span class="radial-tooltip">MASTERY OS</span>
+    </button>
+    <button class="nav-item radial-btn" data-page="tafra" data-tooltip="TAFRA ENGINE" title="TAFRA ENGINE">
+      <svg class="feather-icon"><use xlink:href="#icon-zap"/></svg>
+      <span class="radial-tooltip">TAFRA ENGINE</span>
+    </button>
+    <button class="nav-item radial-btn" data-page="betafra" data-tooltip="BE TAFRA" title="BE TAFRA">
+      <svg class="feather-icon"><use xlink:href="#icon-star"/></svg>
+      <span class="radial-tooltip">BE TAFRA</span>
+    </button>
+    <button class="nav-item radial-btn" data-page="research" data-tooltip="مكتب البحث" title="مكتب البحث">
+      <svg class="feather-icon"><use xlink:href="#icon-search"/></svg>
+      <span class="radial-tooltip">مكتب البحث</span>
+    </button>
+    <button class="nav-item radial-btn" data-page="archive" data-tooltip="الأرشيف والمصادر" title="الأرشيف والمصادر">
+      <svg class="feather-icon"><use xlink:href="#icon-archive"/></svg>
+      <span class="radial-tooltip">الأرشيف والمصادر</span>
+    </button>
+    <button class="nav-item radial-btn subtle" data-page="settings" data-tooltip="الإعدادات والبيانات" title="الإعدادات والبيانات">
+      <svg class="feather-icon"><use xlink:href="#icon-settings"/></svg>
+      <span class="radial-tooltip">الإعدادات والبيانات</span>
+    </button>
+  </div>
+</nav>
+<main class="main-area">
+
+<header class="studio-topbar" id="studioTopbar">
+  <div class="topbar-inner">
+    <div class="brand-lockup-top" data-go="overview" style="cursor:pointer;" title="العودة للرئيسية">
+      <div class="brand-mark-glow"><span>F</span><i>×</i><span>T</span></div>
+      <div>
+        <div class="brand-name-top">FOCUS LAB <b>×</b> TAFRA</div>
+        <div class="brand-sub-top">THE OPERATING SPACE // 2026</div>
+      </div>
+    </div>
+
+    <nav class="studio-nav-pills" id="studioNavPills">
+      <button class="nav-item active" data-page="overview"><svg class="feather-icon"><use xlink:href="#icon-home"/></svg><span>الرئيسية</span></button>
+      <button class="nav-item student-pill-highlight" data-page="student"><svg class="feather-icon"><use xlink:href="#icon-graduation"/></svg><span>بوابة الشباب</span><span class="pill-spark">★</span></button>
+      <button class="nav-item" data-page="learn"><span class="nav-icon">◈</span><span>المكتبة</span></button>
+      <button class="nav-item" data-page="tools"><span class="nav-icon">✳</span><span>الأدوات</span></button>
+      <button class="nav-item" data-page="journey"><span class="nav-icon">↗</span><span>رحلة 28</span></button>
+      <button class="nav-item" data-page="tafra"><span class="nav-icon">✦</span><span>المحتوى</span></button>
+      <button class="nav-item" data-page="mastery"><span class="nav-icon">▦</span><span>الماستري</span></button>
+      <button class="nav-item" data-page="research"><span class="nav-icon">⌕</span><span>البحث</span></button>
+      <button class="nav-item" data-page="archive"><span class="nav-icon">▤</span><span>الأرشيف</span></button>
+      <button class="nav-item" data-page="settings"><span class="nav-icon">⚙</span><span>الإعدادات</span></button>
+    </nav>
+
+    <div class="topbar-actions-cluster">
+      <button class="audio-ctrl-btn" id="headerAudioBtn" title="أصوات التركيز والمذاكرة">
+        <span class="dock-soundwave"><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i></span>
+        <span id="audioTrackName">الصوت الحي</span>
+      </button>
+      <button class="sos-header-btn" id="headerSosBtn" title="طوارئ التسويف">
+        <span>🚨</span>
+        <span>طوارئ التسويف</span>
+      </button>
+      <div class="student-streak-badge" id="headerStreakBadge">🔥 <span id="headerStreakCount">3</span> أيام</div>
+      <label class="global-search-pill">
+        <span>⌕</span>
+        <input id="globalSearch" placeholder="بحث شامل..." type="search"/>
+        <kbd>⌘K</kbd>
+      </label>
+      <button class="theme-toggle-btn" id="themeToggleBtn" title="تبديل المظهر">🌓</button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" title="القائمة الجانبية">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="main-scroll" id="mainScroll">
+<section class="page active" id="page-overview">
+
+<div class="studio-hero-section spotlight-card">
+  <canvas id="heroAuroraCanvas" class="hero-aurora-canvas"></canvas>
+  <button class="hero-fullscreen-btn" id="heroFullscreenBtn" aria-label="ملء الشاشة" title="ملء الشاشة للتركيز الشامل">
+    <svg class="feather-icon"><use xlink:href="#icon-maximize"/></svg>
+  </button>
+  <div class="hero-aurora-glow"></div>
+  
+  <div class="hero-content">
+    <div class="hero-telemetry-badge">
+      <span class="pulse-beacon"></span>
+      <span class="mono-code">SYS.OS // 2026.STUDIO</span>
+      <span class="badge-pipe">|</span>
+      <span class="highlight-text">FOCUS LAB × TAFRA</span>
+      <span class="badge-tag">OFFLINE READY</span>
+    </div>
+
+    <h1 class="hero-display-headline">
+      من المعرفة إلى الفعل.<br/>
+      <span class="solar-gradient-heading">ومن الفعل إلى الإتقان المطلق.</span>
+    </h1>
+
+    <p class="hero-editorial-lead">
+      المساحة التشغيلية الموحدة لشباب وصُنّاع المستقبل — تجمع بين أسرار التركيز البيولوجي، ومختبر الـ 26 أداة تنفيذية، وخارطة الـ 28 يوماً، ومحرك صناعة المحتوى والأثر الرقمي — مصممة لتعمل محلياً بالكامل وبأعلى معايير التصميم العالمية.
+    </p>
+
+    <div class="hero-cta-cluster">
+      <button class="btn btn-hero-gold" data-go="student">
+        <span class="btn-icon">🎓</span>
+        <span>ادخل بوابة شباب الجامعة (Study Room)</span>
+        <span class="btn-arrow">←</span>
+      </button>
+      <button class="btn btn-hero-cyan" id="heroScrollWorkflowBtn">
+        <span class="btn-icon">⚡</span>
+        <span>محرك سير العمل الذكي</span>
+      </button>
+      <button class="btn btn-hero-ghost" data-go="tools">
+        <span class="btn-icon">✳</span>
+        <span>مختبر الـ 26 أداة</span>
+      </button>
+    </div>
+
+    <div class="hero-stats-ticker">
+      <div class="stat-pill"><span class="pill-num">4,175</span><span class="pill-lbl">أصل معرفي ومحتوى</span></div>
+      <span class="stat-bullet">·</span>
+      <div class="stat-pill"><span class="pill-num">26</span><span class="pill-lbl">بروتوكولاً تنفيذياً</span></div>
+      <span class="stat-bullet">·</span>
+      <div class="stat-pill"><span class="pill-num">28</span><span class="pill-lbl">يوماً لبناء العادات</span></div>
+      <span class="stat-bullet">·</span>
+      <div class="stat-pill"><span class="pill-num">40Hz</span><span class="pill-lbl">موجات جاما للتركيز</span></div>
+      <span class="stat-bullet">·</span>
+      <div class="stat-pill status-live"><span>● يعمل محلياً 100%</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Bento Live Showcase (Showreel & MyStack Inspired) -->
+<div class="bento-3d-wrapper">
+  <div class="bento-view-controls">
+    <div class="bento-view-heading">
+      <span class="live-pulse"></span>
+      <span>مساحة الاستكشاف التفاعلية (SPATIAL 3D BENTO)</span>
+    </div>
+    <div class="bento-toggle-group">
+      <button class="bento-toggle-btn active" id="bentoMode3D" title="عرض ثلاثي الأبعاد تفاعلي">
+        <svg class="feather-icon"><use xlink:href="#icon-box"/></svg>
+        <span>3D مكعبات فضائية</span>
+      </button>
+      <button class="bento-toggle-btn" id="bentoModeGrid" title="عرض الشبكة التقليدية">
+        <svg class="feather-icon"><use xlink:href="#icon-archive"/></svg>
+        <span>شبكة مسطحة (Grid)</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="three-bento-container" id="threeBentoContainer">
+    <canvas id="threeBentoCanvas" class="three-bento-canvas"></canvas>
+  </div>
+
+  <div class="bento-showcase-grid">
+  <!-- Card 1: 40Hz Live Audio Synthesizer -->
+  <div class="bento-showcase-card spotlight-card audio-bento">
+    <div class="bento-card-header">
+      <div class="bento-tag">[ 40Hz ACOUSTIC LAB ]</div>
+      <span class="pulse-beacon"></span>
+    </div>
+    <div class="bento-card-body">
+      <h3>موجات جاما وعزل المشتتات</h3>
+      <p>توليد ترددات بيولوجية 40Hz ومؤثرات صوتية مطرية لتهدئة القشرة الدماغية وزيادة استيعاب المعلومات.</p>
+      <div class="bento-audio-bars" id="bentoAudioBars">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <button class="btn-bento-action" id="bentoAudioToggleBtn">
+        <span>🎧 تشغيل الصوت الحي</span>
+      </button>
+      <span class="bento-meta-txt">100% توليد لحظي WebAudio</span>
+    </div>
+  </div>
+
+  <!-- Card 2: SOS Procrastination Breaker -->
+  <div class="bento-showcase-card spotlight-card sos-bento">
+    <div class="bento-card-header">
+      <div class="bento-tag">[ 120s SOS RESCUE ]</div>
+      <span style="font-size:16px;">🚨</span>
+    </div>
+    <div class="bento-card-body">
+      <h3>طوارئ كسر التسويف</h3>
+      <p>بروتوكول الطوارئ السريع لفك الشلل الذهني والبدء في المذاكرة أو العمل خلال دقيقتين فقط.</p>
+      <div class="bento-sos-meter">
+        <div class="meter-bar" style="width: 85%;"></div>
+        <span class="meter-lbl">معدل استعادة التركيز: 85% خلال 120 ثانية</span>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <button class="btn-bento-action sos-btn" id="bentoSosLaunchBtn">
+        <span>⚡ تفعيل بروتوكول الإنقاذ</span>
+      </button>
+      <span class="bento-meta-txt">4 خطوات حاسمة</span>
+    </div>
+  </div>
+
+  <!-- Card 3: Active Recall 3D Hologram -->
+  <div class="bento-showcase-card spotlight-card recall-bento">
+    <div class="bento-card-header">
+      <div class="bento-tag">[ ACTIVE RECALL 3D ]</div>
+      <span style="font-size:16px;">🧠</span>
+    </div>
+    <div class="bento-card-body">
+      <h3>بطاقات الاسترجاع الذكي 3D</h3>
+      <p>تثبيت المفاهيم بالقوة العصبية عبر تقنية الاسترجاع الذاتي بدلاً من وهم القراءة السلبية.</p>
+      <div class="bento-mini-card" id="bentoMiniCard" onclick="this.classList.toggle('flipped'); if(window.FocusAudio) window.FocusAudio.playClick();">
+        <div class="mini-front">
+          <span>سؤال: ما الفرق بين التركيز السطحي والعميق؟</span>
+          <small>اضغط لقلب البطاقة ↻</small>
+        </div>
+        <div class="mini-back">
+          <span>السطحي: مهام مشتتة. العميق: عمل معرفي مكثف يرفع القيمة.</span>
+          <small>✓ استرجاع نشط</small>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <button class="btn-bento-action" data-go="student">
+        <span>تدريب البطاقات الكامل</span>
+      </button>
+      <span class="bento-meta-txt">+50 XP لكل جولة</span>
+    </div>
+  </div>
+
+  <!-- Card 4: Habit Architecture & Streak -->
+  <div class="bento-showcase-card spotlight-card journey-bento">
+    <div class="bento-card-header">
+      <div class="bento-tag">[ 28-DAY ARCHITECTURE ]</div>
+      <span style="font-size:16px;">🔥</span>
+    </div>
+    <div class="bento-card-body">
+      <h3>بناء نظام التركيز المستمر</h3>
+      <p>خارطة يومية تدرجية تنقلك من التشتت إلى الانضباط الصارم خطوة بخطوة على مدار 4 أسابيع.</p>
+      <div class="bento-week-pills">
+        <span class="week-pill done">الأسبوع 1: التطهير ✓</span>
+        <span class="week-pill current">الأسبوع 2: البناء ●</span>
+        <span class="week-pill">الأسبوع 3: التكثيف</span>
+        <span class="week-pill">الأسبوع 4: الماستري</span>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <button class="btn-bento-action" data-go="journey">
+        <span>متابعة الرحلة اليومية ↗</span>
+      </button>
+      <span class="bento-meta-txt">اليوم النشط: 03 / 28</span>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="section-heading compact-heading">
+<div><div class="eyebrow">THE SYSTEM AT A GLANCE</div><h2>المساحة كلها في نظرة واحدة</h2></div>
+<span class="live-chip"><i></i> بيانات المصادر المدمجة</span>
+</div>
+<div class="metrics-grid" id="overviewMetrics"></div>
+<div class="overview-grid">
+
+<div class="editorial-manifesto-card spotlight-card">
+  <div class="editorial-kicker">[ HUMAN BENCHMARK // AXIOM // ذوق وانضباط ]</div>
+  <blockquote class="editorial-quote">
+    «التركيز ليس مجرد حجبٍ للمشتتات؛ بل هو فنّ اختيار المعركة التي تستحق استثمار عمرك فيها، وتحويل المعرفة الراكدة إلى أثرٍ حقيقيٍ وفعلٍ يوميٍ متراكم.»
+  </blockquote>
+  <div class="editorial-author-row">
+    <span class="author-avatar">◈</span>
+    <span class="author-name">FOCUS LAB × TAFRA</span>
+    <span class="author-dot">·</span>
+    <span class="author-spec">STUDIO EDITION 2026</span>
+    <span class="author-benchmark">100% HUMAN-VERIFIED RIGOR</span>
+  </div>
+</div>
+
+<div class="interactive-workflow-hub spotlight-card" id="interactiveWorkflowHub">
+  <div class="workflow-hub-header">
+    <div class="workflow-hub-title">
+      <div class="hub-icon">⚡</div>
+      <div>
+        <div class="eyebrow" style="margin-bottom:0;">THE OPERATING PIPELINE // مسار العمل التفاعلي</div>
+        <h3>محرك سير العمل الذكي</h3>
+        <p>اختر مسارك لتنشيط الخطوات التكتيكية، تشغيل الأدوات، ومتابعة الإنجاز لحظياً.</p>
+      </div>
+    </div>
+    <div class="flow-mode-switch" id="flowModeSwitch">
+      <button class="flow-mode-btn active" id="btnStudentFlow" data-flow="student">
+        <span>🎓</span>
+        <span>مسار الطالب والشباب</span>
+      </button>
+      <button class="flow-mode-btn" id="btnCreatorFlow" data-flow="creator">
+        <span>✦</span>
+        <span>مسار الماستري والصانع</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="workflow-pipeline-track" id="workflowTrack">
+    <!-- Populated dynamically by JavaScript -->
+  </div>
+
+  <div class="workflow-inspector-card" id="workflowInspector">
+    <!-- Populated dynamically by JavaScript -->
+  </div>
+</div>
+
+<div class="panel next-panel">
+<div class="panel-head"><div><span class="panel-kicker">YOUR NEXT MOVE</span><h3>الخطوة التالية</h3></div><span class="spark">✦</span></div>
+<div class="next-move" id="nextMove"></div>
+<button class="text-link" data-go="mastery">افتح مساحة التنفيذ <span>←</span></button>
+</div>
+</div>
+<div class="overview-grid lower-grid">
+<div class="panel progress-panel">
+<div class="panel-head"><div><span class="panel-kicker">28-DAY LEARNING PATH</span><h3>تقدم الرحلة</h3></div><a class="text-link" data-go="journey">التفاصيل ←</a></div>
+<div class="journey-progress"><div class="progress-ring" id="journeyRing"><span id="journeyPct">0%</span></div><div><b dir="ltr" id="journeyCount">0 / 28</b><small>يوم مكتمل</small><p>كل يوم خطوة صغيرة؛ لا يلزم تنفيذ الأيام دفعة واحدة.</p></div></div>
+<div class="mini-week-bars" id="weekBars"></div>
+</div>
+<div class="panel research-panel">
+<div class="panel-head"><div><span class="panel-kicker">RESEARCH DESK</span><h3>حالة الموسوعة</h3></div><a class="text-link" data-go="research">افتح السجل ←</a></div>
+<div class="research-status">
+<div><b>01</b><span><strong>الفصل بين النفس والعقل</strong><small>موقوف لحين تثبيت المؤلف والطبعة</small></span><em class="status-tag red">معلّق</em></div>
+<div><b>02</b><span><strong>ذم الهوى</strong><small>ملف بحثي أساسي جاهز — مع نطاقات لم تُستكمل</small></span><em class="status-tag amber">جزئي معمق</em></div>
+<div><b>03</b><span><strong>صيد الخاطر</strong><small>المحطة التالية بعد حسم المدخل الأول</small></span><em class="status-tag muted">قادم</em></div>
+</div>
+</div>
+</div>
+<div class="footnote-strip"><span>◈</span> الأرقام المعروضة تعكس سجلات الملفات التي تم استيرادها، لا نتائج أداء أو إنجازًا تسويقيًا. مؤشرات KPI تظل أهدافًا مخططة حتى تُدخل نتائج فعلية.</div>
+</section>
+
+      <section class="page" id="page-student">
+        <div class="student-hero-banner">
+          <div class="student-level-card">
+            <div class="student-avatar-box">
+              <div class="student-avatar" id="studentAvatar">🦁</div>
+              <div class="student-title-box">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span class="panel-kicker" style="color:var(--amber); margin-bottom:0;">STUDENT MASTERY HUB</span>
+                  <span class="badge" style="background:rgba(245, 158, 11, 0.2); color:#fbbf24; border:1px solid rgba(245,158,11,0.4);" id="studentLevelTag">المستوى 3</span>
+                </div>
+                <h2 id="studentTitle">وحش المذاكرة والعمل العميق</h2>
+                <p>أنت تبني انضباطك الأكاديمي والمهني خطوة بخطوة بعيداً عن وهم التشتت والدوبامين الرخيص.</p>
+              </div>
+            </div>
+            <div class="xp-progress-container">
+              <div class="xp-label-row">
+                <span>نقاط الخبرة (XP)</span>
+                <span id="xpCountLabel">180 / 300 XP</span>
+              </div>
+              <div class="xp-progress-bar">
+                <div class="xp-progress-fill" id="xpProgressFill" style="width: 60%;"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="student-stats-grid">
+            <div class="student-stat-item">
+              <b id="statStreak">3 🔥</b>
+              <span>أيام التزام متواصل</span>
+            </div>
+            <div class="student-stat-item">
+              <b id="statStudyMin">90 ⏱️</b>
+              <span>دقيقة مذاكرة مركزة</span>
+            </div>
+            <div class="student-stat-item">
+              <b id="statSprints">4 🎯</b>
+              <span>جلسات بومودورو مكتملة</span>
+            </div>
+            <div class="student-stat-item">
+              <b id="statCourses">2 📚</b>
+              <span>مقررات قيد الدراسة</span>
+            </div>
+            <div class="student-stat-item">
+              <b id="statSos">2 🛡️</b>
+              <span>مرات التغلب على التسويف</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Student Sub-Tabs -->
+        <div class="student-subtabs" id="studentSubtabs">
+          <button class="student-tab-btn active" data-stab="study"><span>⏱️</span><span>غرفة المذاكرة والأصوات</span></button>
+          <button class="student-tab-btn" data-stab="sos"><span>🚨</span><span>طوارئ التسويف الفورية</span></button>
+          <button class="student-tab-btn" data-stab="syllabus"><span>📅</span><span>مقسم المناهج والامتحانات</span></button>
+          <button class="student-tab-btn" data-stab="flashcards"><span>🗂️</span><span>بطاقات الاسترجاع النشط</span></button>
+          <button class="student-tab-btn" data-stab="doctor"><span>🩺</span><span>طبيب التركيز الجامعي</span></button>
+          <button class="student-tab-btn" data-stab="career"><span>🚀</span><span>بناء مهارات وسوق العمل</span></button>
+        </div>
+
+        <!-- Sub-tab content containers -->
+        <div id="studentTabContent"></div>
+      </section>
+
+
+<section class="page" id="page-learn">
+<div class="page-intro"><div><div class="eyebrow">FOCUS LEARN / KNOWLEDGE BASE</div><h1>مكتبة الفهم والتحقق</h1><p>كتب، شخصيات، بطاقات بحثية، ومفاهيم قابلة للبحث. كل مادة تحتفظ بدرجة الاطلاع وحدود الاستنتاج.</p></div><div class="intro-stat"><b>33</b><span>RESEARCH CARDS</span></div></div>
+<div class="tab-row" data-tabs="learn">
+<button class="tab active" data-tab="arabicBooks">المكتبة العربية</button><button class="tab" data-tab="westernWorks">الأعمال الغربية</button><button class="tab" data-tab="people">الشخصيات</button><button class="tab" data-tab="researchCards">بطاقات البحث</button><button class="tab" data-tab="ideas">91 فكرة</button>
+</div>
+<div class="content-stage" id="learnContent"></div>
+</section>
+<section class="page" id="page-tools">
+<div class="page-intro"><div><div class="eyebrow">FOCUS TOOLS / PRACTICE LAB</div><h1>الأدوات العملية</h1><p>26 أداة قصيرة لتحويل النية إلى خطوة واضحة. اختر أداة، أدخل بياناتك، وخذ مخرجًا يمكنك استخدامه فورًا.</p></div><div class="intro-stat"><b>26</b><span>INTERACTIVE TOOLS</span></div></div>
+<div class="filter-row"><input class="field search-field" id="toolSearch" placeholder="ابحث عن أداة أو مشكلة..." type="search"/><select class="field" id="toolGroup"><option value="all">كل الأدوات</option><option value="start">البدء والتركيز</option><option value="plan">الأهداف والتخطيط</option><option value="execute">التنفيذ وإدارة العمل</option><option value="learn">التعلم والمراجعة</option><option value="recover">الطاقة والتعافي</option><option value="reflect">المراجعة والتواصل</option></select></div>
+<div class="tool-grid" id="toolsGrid"></div>
+</section>
+<section class="page" id="page-journey">
+<div class="page-intro"><div><div class="eyebrow">FOCUS JOURNEY / 28 DAYS</div><h1>رحلة بناء التركيز</h1><p>مسار تعليمي من أربعة أسابيع: وعي، اتجاه، تنفيذ، ثم استمرارية. اختر يومًا ونفّذ الإجراء وسجّل الناتج.</p></div><div class="intro-stat"><b id="journeyHeaderPct">0%</b><span>YOUR PROGRESS</span></div></div>
+<div class="journey-topline"><div class="journey-stat"><span>مكتمل</span><b id="jCompleted">0</b></div><div class="journey-stat"><span>متبقٍ</span><b id="jRemaining">28</b></div><div class="journey-stat"><span>الأسبوع الحالي</span><b id="jWeek">01 / 04</b></div><div class="journey-stat wide"><span>تاريخ البداية (اختياري لإعادة جدولة الأيام)</span><input class="field small-field" id="journeyStart" type="date"/></div></div>
+<div class="journey-weeks" id="journeyWeeks"></div>
+<div class="panel day-detail empty-state" id="journeyDayDetail">اختر يومًا من الرحلة لعرض الإجراء والمخرج.</div>
+</section>
+<section class="page" id="page-mastery">
+<div class="page-intro"><div><div class="eyebrow">MASTERY OS / EXECUTION SYSTEM</div><h1>نظام إدارة التنفيذ</h1><p>حوّل الالتزامات المفتوحة إلى مهام محددة، وخطوات قابلة للإغلاق، ومراجعات تساعدك على تعديل النظام لا جلد الذات.</p></div><div class="intro-stat"><b id="taskCount">0</b><span>OPEN ITEMS</span></div></div>
+<div class="mastery-flow" id="masteryFlow"></div>
+<div class="mastery-layout">
+<div class="panel task-panel">
+<div class="panel-head"><div><span class="panel-kicker">CAPTURE → CLARIFY → EXECUTE</span><h3>مساحة المهام</h3></div><button class="btn btn-primary btn-small" id="newTaskBtn">＋ مهمة جديدة</button></div>
+<form class="task-form" id="taskForm">
+<input class="field" name="title" placeholder="ما الشيء الذي تريد إغلاقه؟" required=""/>
+<div class="form-row"><select class="field" name="stage"><option>Capture</option><option>Clarify</option><option>Select</option><option>Define</option><option>Plan</option><option>Prepare</option><option>Execute</option><option>Close</option><option>Review</option></select><select class="field" name="priority"><option value="medium">متوسطة</option><option value="high">عالية</option><option value="low">منخفضة</option></select><input class="field" name="due" type="date"/></div>
+<textarea class="field" name="next" placeholder="الخطوة التالية القابلة للتنفيذ..." rows="2"></textarea>
+<button class="btn btn-primary" type="submit">إضافة إلى مساحة التنفيذ <span>↗</span></button>
+</form>
+<div class="task-filters"><button class="chip active" data-taskfilter="open">المفتوحة</button><button class="chip" data-taskfilter="all">الكل</button><button class="chip" data-taskfilter="done">المغلقة</button></div>
+<div class="task-list" id="taskList"></div>
+</div>
+<div class="side-stack">
+<div class="panel"><div class="panel-head"><div><span class="panel-kicker">WEEKLY REVIEW</span><h3>مراجعة سريعة</h3></div><span class="spark">↻</span></div>
+<form class="stack-form" id="weeklyForm"><label>ما الذي أُغلق؟<textarea class="field" name="done" rows="2"></textarea></label><label>ما أكبر احتكاك؟<textarea class="field" name="friction" rows="2"></textarea></label><label>ما التعديل الصغير؟<textarea class="field" name="adjustment" rows="2"></textarea></label><button class="btn btn-secondary" type="submit">حفظ المراجعة</button></form><div class="history-list" id="weeklyHistory"></div>
+</div>
+<div class="panel principle-panel"><span class="panel-kicker">OPERATING PRINCIPLE</span><h3>لا تُحسّن القائمة فقط؛ حسّن طريقة العمل.</h3><p>التقط مرة، وضّح مرة، اختر ما يستحق، ثم عرّف مخرجًا وخطوة تالية. أغلق الحلقة بالمراجعة.</p></div>
+</div>
+</div>
+</section>
+<section class="page" id="page-tafra">
+<div class="page-intro"><div><div class="eyebrow">TAFRA / CONTENT OPERATING ENGINE</div><h1>محرك صناعة المحتوى</h1><p>من بنك الفكرة إلى خطة النشر والإنتاج والتحليل. لا تخلط بين الأهداف المخططة والنتائج الفعلية.</p></div><div class="intro-stat"><b>4,175</b><span>MASTER IDEA RECORDS</span></div></div>
+<div class="content-stats" id="tafraStats"></div>
+<div class="tab-row" data-tabs="tafra">
+<button class="tab active" data-tab="bank">بنك الأفكار</button><button class="tab" data-tab="hero">60 Hero Ideas</button><button class="tab" data-tab="reels">60 ريل تنفيذي</button><button class="tab" data-tab="stories">84 يوم Stories</button><button class="tab" data-tab="carousels">24 Carousel</button><button class="tab" data-tab="youtube">12 YouTube</button><button class="tab" data-tab="campaigns">30 Campaigns</button><button class="tab" data-tab="reelIndex">موسوعة الريلز · 200</button><button class="tab" data-tab="calendar">الخريطة الأسبوعية</button><button class="tab" data-tab="sheets">كل الأوراق</button><button class="tab" data-tab="analytics">التحليل الفعلي</button>
+</div>
+<div class="content-stage" id="tafraContent"></div>
+</section>
+<section class="page" id="page-betafra">
+<div class="page-intro"><div><div class="eyebrow">BE TAFRA / INSTITUTIONAL EXPERIENCE</div><h1>مسار التجربة المؤسسية</h1><p>واجهة منظمة لعرض القيمة التعليمية وتجربة الطالب ومقترح البرنامج الجامعي، مع فصل الحقائق المثبتة عن المقترحات.</p></div><div class="intro-stat"><b>02</b><span>USER JOURNEYS</span></div></div>
+<div class="tab-row" data-tabs="betafra"><button class="tab active" data-tab="student">رحلة الطالب</button><button class="tab" data-tab="institution">رحلة الجامعة</button><button class="tab" data-tab="pilot">تصميم Pilot</button><button class="tab" data-tab="safeguards">الحوكمة والخصوصية</button></div>
+<div class="content-stage" id="betafraContent"></div>
+</section>
+<section class="page" id="page-research">
+<div class="page-intro"><div><div class="eyebrow">RESEARCH DESK / EDITORIAL CONTROL</div><h1>مكتب البحث والتوثيق</h1><p>سجل تراكمي يحفظ موضع الدراسة، درجة التحقق، وما تم وما لم يتم. لا يساوي وجود بطاقة وجود قراءة نصية كاملة.</p></div><div class="intro-stat"><b>12</b><span>ARABIC / ISLAMIC BOOKS</span></div></div>
+<div class="research-dashboard" id="researchDashboard"></div>
+<div class="research-split"><div class="panel"><div class="panel-head"><div><span class="panel-kicker">CUMULATIVE LOG</span><h3>سجل الإنجاز</h3></div><span class="status-tag amber">يُحدّث محليًا</span></div><div id="researchLog"></div></div><div class="panel"><div class="panel-head"><div><span class="panel-kicker">RESEARCH NOTEBOOK</span><h3>أضف ملاحظة بحثية</h3></div></div><form class="stack-form" id="researchNoteForm"><input class="field" name="title" placeholder="عنوان الملاحظة" required=""/><select class="field" name="type"><option>نص أصلي</option><option>تحقق خارجي</option><option>استنتاج تحليلي</option><option>سؤال مفتوح</option><option>تصحيح</option></select><textarea class="field" name="body" placeholder="ما الذي وجدته؟ ما درجة يقينك؟ ما الذي لا يزال ناقصًا؟" required="" rows="4"></textarea><button class="btn btn-primary">حفظ في سجل البحث</button></form><div class="history-list" id="researchNotes"></div></div></div>
+</section>
+<section class="page" id="page-archive">
+<div class="page-intro"><div><div class="eyebrow">SOURCE ROOM / MASTER ARCHIVE</div><h1>الأرشيف والمصادر</h1><p>ابحث داخل المستندات الموحّدة، وارجع إلى الملفات الأصلية المضمّنة في حزمة المنتج.</p></div><div class="intro-stat"><b>03</b><span>MASTER TEXTS</span></div></div>
+<div class="archive-layout"><div class="panel archive-list"><div class="panel-head"><div><span class="panel-kicker">DOCUMENT LIBRARY</span><h3>المستندات الأساسية</h3></div></div><div id="archiveDocs"></div></div><div class="panel archive-reader"><div class="reader-head"><div><span class="panel-kicker">FULL TEXT / SEARCHABLE</span><h3 id="archiveTitle">اختر مستندًا</h3></div><input class="field" id="archiveSearch" placeholder="ابحث داخل المستند..." type="search"/></div><div class="archive-result" id="archiveResult"></div></div></div>
+</section>
+<section class="page" id="page-settings">
+<div class="page-intro"><div><div class="eyebrow">SETTINGS / YOUR DATA</div><h1>التحكم في بياناتك</h1><p>المنتج يعمل محليًا دون حساب أو مزامنة خادم. بياناتك الشخصية المحفوظة لا تغادر هذا المتصفح إلا عند تصديرها بنفسك.</p></div><div class="intro-stat"><b>100%</b><span>LOCAL CONTROL</span></div></div>
+<div class="settings-grid"><div class="panel"><span class="panel-kicker">PORTABILITY</span><h3>نسخة احتياطية من بياناتك</h3><p>صدّر المهام والتقدم والملاحظات وإعدادات الرحلة في ملف JSON، ثم استورده في جهاز آخر.</p><div class="button-row"><button class="btn btn-primary" id="exportData">تصدير بياناتي JSON ↓</button><label class="btn btn-secondary file-button">استيراد JSON ↑<input accept="application/json" id="importData" type="file"/></label></div><div class="inline-feedback" id="dataStatus"></div></div><div class="panel"><span class="panel-kicker">PRIVACY</span><h3>بياناتك لا تتزامن تلقائيًا</h3><ul class="plain-list"><li>لا يوجد تسجيل دخول أو حساب.</li><li>المهام والملاحظات والتقدم في localStorage.</li><li>ملفات المصادر ثابتة داخل نسخة البرنامج.</li><li>المؤشرات الفعلية لا تُرسل إلى أي جهة.</li></ul></div><div class="panel danger-zone"><span class="panel-kicker">RESET</span><h3>إعادة ضبط المساحة</h3><p>يمسح هذا الإجراء بياناتك الشخصية المحلية فقط. لا يحذف ملفات المصادر الأصلية من الحزمة.</p><button class="btn btn-danger" id="resetData">مسح بياناتي المحلية</button></div><div class="panel"><span class="panel-kicker">ABOUT THIS RELEASE</span><h3>حدود النسخة الحالية</h3><p>نسخة محلية قابلة للاستخدام والتطوير. لا يوجد نشر عام أو ربط بمؤسسة أو حسابات مستخدمين أو مزامنة سحابية أو تنبيهات تلقائية.</p><p class="muted-text">الإصدار 1.0.0 · 10 نوفمبر 2026</p></div></div>
+</section>
+
+<nav class="sol-floating-dock" id="solFloatingDock">
+  <button class="dock-pill-btn active" id="dockWorkflowBtn" title="محرك سير العمل التفاعلي">
+    <span class="dock-icon">⚡</span>
+    <span class="dock-label">سير العمل</span>
+  </button>
+  <div class="dock-divider"></div>
+  <button class="dock-pill-btn" id="dockAudioBtn" title="تشغيل أصوات التركيز 40Hz">
+    <span class="dock-soundwave" id="dockSoundwave"><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i></span>
+    <span class="dock-label" id="dockAudioLabel">الصوت الحي</span>
+  </button>
+  <button class="dock-pill-btn" id="dockZenBtn" title="الوضع الصامت بدون مشتتات">
+    <span class="dock-icon">🧘</span>
+    <span class="dock-label">وضع الزن</span>
+  </button>
+  <button class="dock-pill-btn" id="dockSosBtn" title="طوارئ التسويف الفورية">
+    <span class="dock-icon">🚨</span>
+    <span class="dock-label">طوارئ SOS</span>
+  </button>
+  <div class="dock-divider"></div>
+  <button class="dock-pill-btn" id="dockSearchBtn" title="البحث السريع (⌘K)">
+    <span class="dock-icon">⌕</span>
+    <kbd>⌘K</kbd>
+  </button>
+  <button class="dock-pill-btn" id="dockThemeBtn" title="تبديل الإضاءة">
+    <span class="dock-icon">🌓</span>
+  </button>
+</nav>
+
+</div>
+</main>
+<div class="mobile-bottom-nav">
+<button class="mobile-nav-pill active" data-page="overview"><span>⌂</span><span>الرئيسية</span></button>
+<button class="mobile-nav-pill" data-page="student"><span>🎓</span><span>الجامعة</span></button>
+<button class="mobile-nav-pill" data-page="tools"><span>✳</span><span>الأدوات</span></button>
+<button class="mobile-nav-pill" data-page="journey"><span>↗</span><span>الرحلة</span></button>
+<button class="mobile-nav-pill" data-page="tafra"><span>✦</span><span>المحتوى</span></button>
+</div></div>
+<div aria-hidden="true" class="modal-backdrop" id="toolModal"><div aria-labelledby="modalTitle" aria-modal="true" class="modal-window" role="dialog"><div class="modal-header"><div><span class="panel-kicker">FOCUS TOOLS / INTERACTIVE</span><h2 id="modalTitle">أداة</h2><p id="modalDescription"></p></div><button aria-label="إغلاق" class="icon-button close-modal" id="closeModal">×</button></div><div class="modal-body" id="modalBody"></div><div class="modal-footer"><span>كل النتائج إرشادية تعليمية وليست تشخيصًا أو علاجًا.</span><button class="btn btn-secondary" id="closeModal2">إغلاق</button></div></div></div>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<div aria-hidden="true" class="command-palette" id="commandPalette"><div class="command-box"><input id="commandInput" placeholder="اكتب اسم القسم أو الأداة..."/><div id="commandResults"></div><small>ESC للإغلاق · ENTER للفتح</small></div></div>
+<script src="assets/data.js"></script>
+<script src="assets/corpus.js"></script>
+<script src="assets/app.js"></script>
+<canvas id="confettiCanvas"></canvas>
+<div class="teleprompter-overlay" id="teleprompterModal">
+<div class="prompter-header">
+<div>
+<span class="badge" style="background:#0284c7; color:#fff;">TELEPROMPTER</span>
+<h3 id="prompterTitle" style="display:inline; margin-right:10px; color:#fff;">ملقن الكاميرا لصناعة المحتوى</h3>
+</div>
+<div style="display:flex; align-items:center; gap:12px;">
+<button class="btn btn-secondary" id="prompterMirrorBtn">🪞 قلب الشاشة (سيلفي)</button>
+<label style="color:#fff; font-size:12px;">السرعة: <input id="prompterSpeed" max="8" min="1" type="range" value="3"/></label>
+<label style="color:#fff; font-size:12px;">حجم الخط: <input id="prompterFontSize" max="60" min="20" type="range" value="34"/></label>
+<button class="btn btn-primary" id="prompterPlayBtn">▶️ تشغيل</button>
+<button class="btn btn-danger" id="prompterCloseBtn">✕ إغلاق</button>
+</div>
+</div>
+<div class="prompter-body" id="prompterBody">
+<div class="prompter-text" id="prompterText"></div>
+</div>
+</div>
+<div class="zen-overlay" id="zenModal">
+<div style="padding:20px; display:flex; justify-content:space-between; align-items:center;">
+<span class="badge" style="background:rgba(16,185,129,0.2); color:#10b981; border:1px solid #10b981;">ZEN STUDY MODE</span>
+<button class="btn btn-secondary" id="closeZenBtn">خروج من وضع الزن (ESC)</button>
+</div>
+<div class="zen-timer-wrap">
+<div class="zen-digits" id="zenDigits">25:00</div>
+<div class="zen-task-title" id="zenTaskTitle">المهمة الحالية قيد الإنجاز</div>
+<div style="margin-top:25px; display:flex; gap:12px;">
+<button class="btn-timer-primary" id="zenToggleBtn">▶️ تشغيل</button>
+<button class="btn-timer-secondary" id="zenResetBtn">🔄 إعادة ضبط</button>
+</div>
+</div>
+</div>
+<script src="assets/three.min.js"></script>
+<script src="assets/hero_shader.js"></script>
+<script src="assets/radial_nav.js"></script>
+<script src="assets/three_bento.js"></script>
+<script src="assets/student-hub.js"></script></body>
+</html>

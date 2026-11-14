@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10283a">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="description" content="FOCUS LAB × TAFRA OS — مساحة متكاملة للتعلم وإدارة التركيز والتنفيذ وصناعة المحتوى والبحث.">
+<title>FOCUS LAB × TAFRA OS</title>
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand-lockup">
+      <div class="brand-mark"><span>F</span><i>×</i><span>T</span></div>
+      <div><div class="brand-name">FOCUS LAB <b>×</b> TAFRA</div><div class="brand-sub">THE OPERATING SPACE</div></div>
+    </div>
+    <div class="sidebar-label">مساحة العمل</div>
+    <nav class="primary-nav" aria-label="التنقل الرئيسي">
+      <button class="nav-item active" data-page="overview"><span class="nav-icon">⌂</span><span>الرئيسية</span><kbd>01</kbd></button>
+      <button class="nav-item" data-page="learn"><span class="nav-icon">◈</span><span>FOCUS LEARN</span><kbd>02</kbd></button>
+      <button class="nav-item" data-page="tools"><span class="nav-icon">✳</span><span>FOCUS TOOLS</span><kbd>03</kbd></button>
+      <button class="nav-item" data-page="journey"><span class="nav-icon">↗</span><span>رحلة 28 يومًا</span><kbd>04</kbd></button>
+      <button class="nav-item" data-page="mastery"><span class="nav-icon">▦</span><span>MASTERY OS</span><kbd>05</kbd></button>
+      <button class="nav-item" data-page="tafra"><span class="nav-icon">✦</span><span>TAFRA ENGINE</span><kbd>06</kbd></button>
+      <button class="nav-item" data-page="betafra"><span class="nav-icon">⌘</span><span>BE TAFRA</span><kbd>07</kbd></button>
+      <button class="nav-item" data-page="research"><span class="nav-icon">⌕</span><span>مكتب البحث</span><kbd>08</kbd></button>
+      <button class="nav-item" data-page="archive"><span class="nav-icon">▤</span><span>الأرشيف والمصادر</span><kbd>09</kbd></button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="local-status"><span class="status-dot"></span><span>وضع محلي آمن</span><small>OFFLINE READY</small></div>
+      <button class="nav-item subtle" data-page="settings"><span class="nav-icon">⚙</span><span>الإعدادات والبيانات</span></button>
+      <div class="sidebar-version">VERSION 1.0.0 <span>·</span> 10 NOV 2026</div>
+    </div>
+  </aside>
+
+  <main class="main-area">
+    <header class="topbar">
+      <button class="mobile-menu" id="mobileMenu" aria-label="فتح القائمة">☰</button>
+      <div class="breadcrumb"><span>FOCUS LAB × TAFRA</span><i>/</i><b id="currentSection">الرئيسية</b></div>
+      <div class="top-actions">
+        <label class="global-search"><span>⌕</span><input id="globalSearch" type="search" placeholder="ابحث في الموسوعة والأفكار والأدوات..."><kbd>⌘ K</kbd></label>
+        <button class="icon-button" id="quickAdd" title="إضافة مهمة">＋</button>
+        <div class="avatar">YE</div>
+      </div>
+    </header>
+
+    <div class="main-scroll" id="mainScroll">
+      <section class="page active" id="page-overview">
+        <div class="hero-panel">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR PERSONAL OPERATING SPACE</div>
+            <h1>من المعرفة إلى الفعل.<br><em>ومن الفعل إلى الإتقان.</em></h1>
+            <p>مساحة واحدة تجمع التعلم، وإدارة التركيز، وتنفيذ المشاريع، وصناعة المحتوى، والبحث المنضبط — في نظام مترابط يعمل محليًا.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" data-go="tools">ابدأ بأداة عملية <span>↗</span></button>
+              <button class="btn btn-ghost" data-go="learn">استكشف المكتبة <span>←</span></button>
+            </div>
+            <div class="hero-proof"><span>01 <b>LEARN</b></span><span>02 <b>EXECUTE</b></span><span>03 <b>CREATE</b></span></div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+            <div class="core-node"><div class="core-glyph">F<span>×</span>T</div><small>FOCUS / FLOW</small></div>
+            <div class="float-node node-a"><b>26</b><small>TOOLS</small></div>
+            <div class="float-node node-b"><b>28</b><small>DAYS</small></div>
+            <div class="float-node node-c"><b>4.1K</b><small>IDEAS</small></div>
+            <div class="visual-caption">ONE SYSTEM · MULTIPLE PATHS</div>
+          </div>
+        </div>
+
+        <div class="section-heading compact-heading">
+          <div><div class="eyebrow">THE SYSTEM AT A GLANCE</div><h2>المساحة كلها في نظرة واحدة</h2></div>
+          <span class="live-chip"><i></i> بيانات المصادر المدمجة</span>
+        </div>
+        <div class="metrics-grid" id="overviewMetrics"></div>
+
+        <div class="overview-grid">
+          <div class="panel system-panel">
+            <div class="panel-head"><div><span class="panel-kicker">CONNECTED ECOSYSTEM</span><h3>كيف تتحرك المنظومة؟</h3></div><span class="panel-number">01—06</span></div>
+            <div class="system-flow">
+              <div class="system-step"><span class="step-no">01</span><b>FOCUS LEARN</b><small>افهم وابحث وتحقق</small></div><span class="flow-arrow">←</span>
+              <div class="system-step"><span class="step-no">02</span><b>FOCUS TOOLS</b><small>حوّل الفهم إلى فعل</small></div><span class="flow-arrow">←</span>
+              <div class="system-step"><span class="step-no">03</span><b>FOCUS JOURNEY</b><small>ابنِ الاستمرارية</small></div>
+            </div>
+            <div class="system-bridge"><span>MASTERY OS</span><i>يدير التنفيذ الشخصي والمشاريع</i><span>TAFRA ENGINE</span><i>يحوّل المعرفة إلى محتوى</i><span>BE TAFRA</span><i>يهيئ التجربة المؤسسية</i></div>
+            <div class="system-note">مصدر / كتاب / بحث / تجربة ← تحقق ← مبدأ قابل للاختبار ← أداة أو رسالة ← تجربة صغيرة ← قياس ومراجعة.</div>
+          </div>
+          <div class="panel next-panel">
+            <div class="panel-head"><div><span class="panel-kicker">YOUR NEXT MOVE</span><h3>الخطوة التالية</h3></div><span class="spark">✦</span></div>
+            <div id="nextMove" class="next-move"></div>
+            <button class="text-link" data-go="mastery">افتح مساحة التنفيذ <span>←</span></button>
+          </div>
+        </div>
+        <div class="overview-grid lower-grid">
+          <div class="panel progress-panel">
+            <div class="panel-head"><div><span class="panel-kicker">28-DAY LEARNING PATH</span><h3>تقدم الرحلة</h3></div><a class="text-link" data-go="journey">التفاصيل ←</a></div>
+            <div class="journey-progress"><div class="progress-ring" id="journeyRing"><span id="journeyPct">0%</span></div><div><b id="journeyCount" dir="ltr">0 / 28</b><small>يوم مكتمل</small><p>كل يوم خطوة صغيرة؛ لا يلزم تنفيذ الأيام دفعة واحدة.</p></div></div>
+            <div class="mini-week-bars" id="weekBars"></div>
+          </div>
+          <div class="panel research-panel">
+            <div class="panel-head"><div><span class="panel-kicker">RESEARCH DESK</span><h3>حالة الموسوعة</h3></div><a class="text-link" data-go="research">افتح السجل ←</a></div>
+            <div class="research-status">
+              <div><b>01</b><span><strong>الفصل بين النفس والعقل</strong><small>موقوف لحين تثبيت المؤلف والطبعة</small></span><em class="status-tag red">معلّق</em></div>
+              <div><b>02</b><span><strong>ذم الهوى</strong><small>ملف بحثي أساسي جاهز — مع نطاقات لم تُستكمل</small></span><em class="status-tag amber">جزئي معمق</em></div>
+              <div><b>03</b><span><strong>صيد الخاطر</strong><small>المحطة التالية بعد حسم المدخل الأول</small></span><em class="status-tag muted">قادم</em></div>
+            </div>
+          </div>
+        </div>
+        <div class="footnote-strip"><span>◈</span> الأرقام المعروضة تعكس سجلات الملفات التي تم استيرادها، لا نتائج أداء أو إنجازًا تسويقيًا. مؤشرات KPI تظل أهدافًا مخططة حتى تُدخل نتائج فعلية.</div>
+      </section>
+
+      <section class="page" id="page-learn">
+        <div class="page-intro"><div><div class="eyebrow">FOCUS LEARN / KNOWLEDGE BASE</div><h1>مكتبة الفهم والتحقق</h1><p>كتب، شخصيات، بطاقات بحثية، ومفاهيم قابلة للبحث. كل مادة تحتفظ بدرجة الاطلاع وحدود الاستنتاج.</p></div><div class="intro-stat"><b>33</b><span>RESEARCH CARDS</span></div></div>
+        <div class="tab-row" data-tabs="learn">
+          <button class="tab active" data-tab="arabicBooks">المكتبة العربية</button><button class="tab" data-tab="westernWorks">الأعمال الغربية</button><button class="tab" data-tab="people">الشخصيات</button><button class="tab" data-tab="researchCards">بطاقات البحث</button><button class="tab" data-tab="ideas">91 فكرة</button>
+        </div>
+        <div id="learnContent" class="content-stage"></div>
+      </section>
+
+      <section class="page" id="page-tools">
+        <div class="page-intro"><div><div class="eyebrow">FOCUS TOOLS / PRACTICE LAB</div><h1>الأدوات العملية</h1><p>26 أداة قصيرة لتحويل النية إلى خطوة واضحة. اختر أداة، أدخل بياناتك، وخذ مخرجًا يمكنك استخدامه فورًا.</p></div><div class="intro-stat"><b>26</b><span>INTERACTIVE TOOLS</span></div></div>
+        <div class="filter-row"><input id="toolSearch" class="field search-field" type="search" placeholder="ابحث عن أداة أو مشكلة..."><select id="toolGroup" class="field"><option value="all">كل الأدوات</option><option value="start">البدء والتركيز</option><option value="plan">الأهداف والتخطيط</option><option value="execute">التنفيذ وإدارة العمل</option><option value="learn">التعلم والمراجعة</option><option value="recover">الطاقة والتعافي</option><option value="reflect">المراجعة والتواصل</option></select></div>
+        <div id="toolsGrid" class="tool-grid"></div>
+      </section>
+
+      <section class="page" id="page-journey">
+        <div class="page-intro"><div><div class="eyebrow">FOCUS JOURNEY / 28 DAYS</div><h1>رحلة بناء التركيز</h1><p>مسار تعليمي من أربعة أسابيع: وعي، اتجاه، تنفيذ، ثم استمرارية. اختر يومًا ونفّذ الإجراء وسجّل الناتج.</p></div><div class="intro-stat"><b id="journeyHeaderPct">0%</b><span>YOUR PROGRESS</span></div></div>
+        <div class="journey-topline"><div class="journey-stat"><span>مكتمل</span><b id="jCompleted">0</b></div><div class="journey-stat"><span>متبقٍ</span><b id="jRemaining">28</b></div><div class="journey-stat"><span>الأسبوع الحالي</span><b id="jWeek">01 / 04</b></div><div class="journey-stat wide"><span>تاريخ البداية (اختياري لإعادة جدولة الأيام)</span><input type="date" id="journeyStart" class="field small-field"></div></div>
+        <div id="journeyWeeks" class="journey-weeks"></div>
+        <div id="journeyDayDetail" class="panel day-detail empty-state">اختر يومًا من الرحلة لعرض الإجراء والمخرج.</div>
+      </section>
+
+      <section class="page" id="page-mastery">
+        <div class="page-intro"><div><div class="eyebrow">MASTERY OS / EXECUTION SYSTEM</div><h1>نظام إدارة التنفيذ</h1><p>حوّل الالتزامات المفتوحة إلى مهام محددة، وخطوات قابلة للإغلاق، ومراجعات تساعدك على تعديل النظام لا جلد الذات.</p></div><div class="intro-stat"><b id="taskCount">0</b><span>OPEN ITEMS</span></div></div>
+        <div class="mastery-flow" id="masteryFlow"></div>
+        <div class="mastery-layout">
+          <div class="panel task-panel">
+            <div class="panel-head"><div><span class="panel-kicker">CAPTURE → CLARIFY → EXECUTE</span><h3>مساحة المهام</h3></div><button class="btn btn-primary btn-small" id="newTaskBtn">＋ مهمة جديدة</button></div>
+            <form id="taskForm" class="task-form">
+              <input class="field" name="title" required placeholder="ما الشيء الذي تريد إغلاقه؟">
+              <div class="form-row"><select class="field" name="stage"><option>Capture</option><option>Clarify</option><option>Select</option><option>Define</option><option>Plan</option><option>Prepare</option><option>Execute</option><option>Close</option><option>Review</option></select><select class="field" name="priority"><option value="medium">متوسطة</option><option value="high">عالية</option><option value="low">منخفضة</option></select><input class="field" type="date" name="due"></div>
+              <textarea class="field" name="next" rows="2" placeholder="الخطوة التالية القابلة للتنفيذ..."></textarea>
+              <button class="btn btn-primary" type="submit">إضافة إلى مساحة التنفيذ <span>↗</span></button>
+            </form>
+            <div class="task-filters"><button class="chip active" data-taskfilter="open">المفتوحة</button><button class="chip" data-taskfilter="all">الكل</button><button class="chip" data-taskfilter="done">المغلقة</button></div>
+            <div id="taskList" class="task-list"></div>
+          </div>
+          <div class="side-stack">
+            <div class="panel"><div class="panel-head"><div><span class="panel-kicker">WEEKLY REVIEW</span><h3>مراجعة سريعة</h3></div><span class="spark">↻</span></div>
+              <form id="weeklyForm" class="stack-form"><label>ما الذي أُغلق؟<textarea name="done" class="field" rows="2"></textarea></label><label>ما أكبر احتكاك؟<textarea name="friction" class="field" rows="2"></textarea></label><label>ما التعديل الصغير؟<textarea name="adjustment" class="field" rows="2"></textarea></label><button class="btn btn-secondary" type="submit">حفظ المراجعة</button></form><div id="weeklyHistory" class="history-list"></div>
+            </div>
+            <div class="panel principle-panel"><span class="panel-kicker">OPERATING PRINCIPLE</span><h3>لا تُحسّن القائمة فقط؛ حسّن طريقة العمل.</h3><p>التقط مرة، وضّح مرة، اختر ما يستحق، ثم عرّف مخرجًا وخطوة تالية. أغلق الحلقة بالمراجعة.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-tafra">
+        <div class="page-intro"><div><div class="eyebrow">TAFRA / CONTENT OPERATING ENGINE</div><h1>محرك صناعة المحتوى</h1><p>من بنك الفكرة إلى خطة النشر والإنتاج والتحليل. لا تخلط بين الأهداف المخططة والنتائج الفعلية.</p></div><div class="intro-stat"><b>4,175</b><span>MASTER IDEA RECORDS</span></div></div>
+        <div class="content-stats" id="tafraStats"></div>
+        <div class="tab-row" data-tabs="tafra">
+          <button class="tab active" data-tab="bank">بنك الأفكار</button><button class="tab" data-tab="hero">60 Hero Ideas</button><button class="tab" data-tab="reels">60 ريل تنفيذي</button><button class="tab" data-tab="stories">84 يوم Stories</button><button class="tab" data-tab="carousels">24 Carousel</button><button class="tab" data-tab="youtube">12 YouTube</button><button class="tab" data-tab="campaigns">30 Campaigns</button><button class="tab" data-tab="reelIndex">موسوعة الريلز · 200</button><button class="tab" data-tab="calendar">الخريطة الأسبوعية</button><button class="tab" data-tab="sheets">كل الأوراق</button><button class="tab" data-tab="analytics">التحليل الفعلي</button>
+        </div>
+        <div id="tafraContent" class="content-stage"></div>
+      </section>
+
+      <section class="page" id="page-betafra">
+        <div class="page-intro"><div><div class="eyebrow">BE TAFRA / INSTITUTIONAL EXPERIENCE</div><h1>مسار التجربة المؤسسية</h1><p>واجهة منظمة لعرض القيمة التعليمية وتجربة الطالب ومقترح البرنامج الجامعي، مع فصل الحقائق المثبتة عن المقترحات.</p></div><div class="intro-stat"><b>02</b><span>USER JOURNEYS</span></div></div>
+        <div class="tab-row" data-tabs="betafra"><button class="tab active" data-tab="student">رحلة الطالب</button><button class="tab" data-tab="institution">رحلة الجامعة</button><button class="tab" data-tab="pilot">تصميم Pilot</button><button class="tab" data-tab="safeguards">الحوكمة والخصوصية</button></div>
+        <div id="betafraContent" class="content-stage"></div>
+      </section>
+
+      <section class="page" id="page-research">
+        <div class="page-intro"><div><div class="eyebrow">RESEARCH DESK / EDITORIAL CONTROL</div><h1>مكتب البحث والتوثيق</h1><p>سجل تراكمي يحفظ موضع الدراسة، درجة التحقق، وما تم وما لم يتم. لا يساوي وجود بطاقة وجود قراءة نصية كاملة.</p></div><div class="intro-stat"><b>12</b><span>ARABIC / ISLAMIC BOOKS</span></div></div>
+        <div id="researchDashboard" class="research-dashboard"></div>
+        <div class="research-split"><div class="panel"><div class="panel-head"><div><span class="panel-kicker">CUMULATIVE LOG</span><h3>سجل الإنجاز</h3></div><span class="status-tag amber">يُحدّث محليًا</span></div><div id="researchLog"></div></div><div class="panel"><div class="panel-head"><div><span class="panel-kicker">RESEARCH NOTEBOOK</span><h3>أضف ملاحظة بحثية</h3></div></div><form id="researchNoteForm" class="stack-form"><input name="title" class="field" placeholder="عنوان الملاحظة" required><select name="type" class="field"><option>نص أصلي</option><option>تحقق خارجي</option><option>استنتاج تحليلي</option><option>سؤال مفتوح</option><option>تصحيح</option></select><textarea class="field" name="body" rows="4" placeholder="ما الذي وجدته؟ ما درجة يقينك؟ ما الذي لا يزال ناقصًا؟" required></textarea><button class="btn btn-primary">حفظ في سجل البحث</button></form><div id="researchNotes" class="history-list"></div></div></div>
+      </section>
+
+      <section class="page" id="page-archive">
+        <div class="page-intro"><div><div class="eyebrow">SOURCE ROOM / MASTER ARCHIVE</div><h1>الأرشيف والمصادر</h1><p>ابحث داخل المستندات الموحّدة، وارجع إلى الملفات الأصلية المضمّنة في حزمة المنتج.</p></div><div class="intro-stat"><b>03</b><span>MASTER TEXTS</span></div></div>
+        <div class="archive-layout"><div class="panel archive-list"><div class="panel-head"><div><span class="panel-kicker">DOCUMENT LIBRARY</span><h3>المستندات الأساسية</h3></div></div><div id="archiveDocs"></div></div><div class="panel archive-reader"><div class="reader-head"><div><span class="panel-kicker">FULL TEXT / SEARCHABLE</span><h3 id="archiveTitle">اختر مستندًا</h3></div><input class="field" type="search" id="archiveSearch" placeholder="ابحث داخل المستند..."></div><div id="archiveResult" class="archive-result"></div></div></div>
+      </section>
+
+      <section class="page" id="page-settings">
+        <div class="page-intro"><div><div class="eyebrow">SETTINGS / YOUR DATA</div><h1>التحكم في بياناتك</h1><p>المنتج يعمل محليًا دون حساب أو مزامنة خادم. بياناتك الشخصية المحفوظة لا تغادر هذا المتصفح إلا عند تصديرها بنفسك.</p></div><div class="intro-stat"><b>100%</b><span>LOCAL CONTROL</span></div></div>
+        <div class="settings-grid"><div class="panel"><span class="panel-kicker">PORTABILITY</span><h3>نسخة احتياطية من بياناتك</h3><p>صدّر المهام والتقدم والملاحظات وإعدادات الرحلة في ملف JSON، ثم استورده في جهاز آخر.</p><div class="button-row"><button class="btn btn-primary" id="exportData">تصدير بياناتي JSON ↓</button><label class="btn btn-secondary file-button">استيراد JSON ↑<input type="file" id="importData" accept="application/json"></label></div><div id="dataStatus" class="inline-feedback"></div></div><div class="panel"><span class="panel-kicker">PRIVACY</span><h3>بياناتك لا تتزامن تلقائيًا</h3><ul class="plain-list"><li>لا يوجد تسجيل دخول أو حساب.</li><li>المهام والملاحظات والتقدم في localStorage.</li><li>ملفات المصادر ثابتة داخل نسخة البرنامج.</li><li>المؤشرات الفعلية لا تُرسل إلى أي جهة.</li></ul></div><div class="panel danger-zone"><span class="panel-kicker">RESET</span><h3>إعادة ضبط المساحة</h3><p>يمسح هذا الإجراء بياناتك الشخصية المحلية فقط. لا يحذف ملفات المصادر الأصلية من الحزمة.</p><button class="btn btn-danger" id="resetData">مسح بياناتي المحلية</button></div><div class="panel"><span class="panel-kicker">ABOUT THIS RELEASE</span><h3>حدود النسخة الحالية</h3><p>نسخة محلية قابلة للاستخدام والتطوير. لا يوجد نشر عام أو ربط بمؤسسة أو حسابات مستخدمين أو مزامنة سحابية أو تنبيهات تلقائية.</p><p class="muted-text">الإصدار 1.0.0 · 10 نوفمبر 2026</p></div></div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<div class="modal-backdrop" id="toolModal" aria-hidden="true"><div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-header"><div><span class="panel-kicker">FOCUS TOOLS / INTERACTIVE</span><h2 id="modalTitle">أداة</h2><p id="modalDescription"></p></div><button class="icon-button close-modal" id="closeModal" aria-label="إغلاق">×</button></div><div id="modalBody" class="modal-body"></div><div class="modal-footer"><span>كل النتائج إرشادية تعليمية وليست تشخيصًا أو علاجًا.</span><button class="btn btn-secondary" id="closeModal2">إغلاق</button></div></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="command-palette" id="commandPalette" aria-hidden="true"><div class="command-box"><input id="commandInput" placeholder="اكتب اسم القسم أو الأداة..."><div id="commandResults"></div><small>ESC للإغلاق · ENTER للفتح</small></div></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/corpus.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

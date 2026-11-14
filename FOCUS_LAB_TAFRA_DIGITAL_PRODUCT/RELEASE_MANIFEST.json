@@ -1,0 +1,166 @@
+{
+  "product": "FOCUS LAB × TAFRA OS",
+  "version": "1.0.0",
+  "release_date": "2026-11-10",
+  "release_type": "local_offline_first_digital_product",
+  "privacy": "local_only",
+  "file_count": 31,
+  "total_payload_bytes": 50064025,
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "size_bytes": 1324,
+      "sha256": "581602ac2898c869d069e105d108b465e9616281dbdbd10aa6f32e94c3842441"
+    },
+    {
+      "path": "FOCUS_LAB_TAFRA_OS_Standalone.html",
+      "size_bytes": 20001861,
+      "sha256": "da944deb19152a1238514730887875a1eaf90426b546a6a72e5d37dd01de9162"
+    },
+    {
+      "path": "MIGRATION_MAP.md",
+      "size_bytes": 2970,
+      "sha256": "7403923a845cf497053a2fb5355ef6e44be4d7040f1148b51226d196f451bef7"
+    },
+    {
+      "path": "PRODUCT_INVENTORY.md",
+      "size_bytes": 4729,
+      "sha256": "f08817480c6d73353c3ad72ea808ae73adaf86389e2884996c084178e80444c5"
+    },
+    {
+      "path": "QA_REPORT.md",
+      "size_bytes": 5721,
+      "sha256": "0ee45e633947a9bfffeec22169686f69cc366dc1d104f066e78c4a81278c02f3"
+    },
+    {
+      "path": "README_AR.md",
+      "size_bytes": 6760,
+      "sha256": "5e31d49ca192f1ce6a2fcfc3105a828ac55feb1e28e708ec0b7b86a3d52b926b"
+    },
+    {
+      "path": "START_HERE_AR.txt",
+      "size_bytes": 644,
+      "sha256": "86de961b202956bc281cf94c38b0172d86148129e2c54c66cf5ac26ae235d03b"
+    },
+    {
+      "path": "assets/app.css",
+      "size_bytes": 32101,
+      "sha256": "7728ad1aa68cab543dbadc476dc47358fb50505f9811c160bbea856f1b635151"
+    },
+    {
+      "path": "assets/app.js",
+      "size_bytes": 82549,
+      "sha256": "6b5fe702ebffb51389f5a9876157de00e04fcdc146d4cbb6c7fde83d65e3ca64"
+    },
+    {
+      "path": "assets/corpus.js",
+      "size_bytes": 2083835,
+      "sha256": "2ce35e71b2ed97796e2b8f6d581e4a0eb8f558654d715d1ca7615ca7c19b3d5c"
+    },
+    {
+      "path": "assets/data.js",
+      "size_bytes": 17778870,
+      "sha256": "011531f164bee4905581478f278997ee1f1f9ad8f1457a44b34da6b91d3afdc7"
+    },
+    {
+      "path": "assets/favicon.svg",
+      "size_bytes": 255,
+      "sha256": "ee7b5e468ad157bfa3c8c13db0ac70d377336726b3f0e271088c40c14e9cf31d"
+    },
+    {
+      "path": "index.html",
+      "size_bytes": 24198,
+      "sha256": "83af1d776c1caadd61050b4b8b0aeb8387d8c3fdb3a4f7a1c57fff4ff3468670"
+    },
+    {
+      "path": "library/ذم_الهوى_المصادر.md",
+      "size_bytes": 3494,
+      "sha256": "e07ad5f3f2a13f57ac7cebb0aab6bacf6d839e725cd5a6f5cd17b63ca6d31a7a"
+    },
+    {
+      "path": "library/ذم_الهوى_دراسة_بحثية.pdf",
+      "size_bytes": 116296,
+      "sha256": "56840a21ad0d74b0aa6457332a5bdfa21f45cadb74a04ea3fee2c4b88a71779b"
+    },
+    {
+      "path": "library/ذم_الهوى_ملاحظات.md",
+      "size_bytes": 4818,
+      "sha256": "bdbf23a857e9c68cb89e7124323c18996d2786e46393d1f8c79076d62b36b856"
+    },
+    {
+      "path": "library/سجل_التقدم_البحثي.json",
+      "size_bytes": 5344,
+      "sha256": "9478262d8023c9cd468fddb0f770f45aa09ae8f540cfc6c6c07626705cf60506"
+    },
+    {
+      "path": "preview_dashboard.png",
+      "size_bytes": 286690,
+      "sha256": "0606202639e2cdebc30707069381e02c3e62e0c8c7222cdc037df8ee1d7e3973"
+    },
+    {
+      "path": "preview_mobile.png",
+      "size_bytes": 187631,
+      "sha256": "64bb24de47fac08cd96ffc73466d114e971d1542dc80b5b85d26fbfdc541ae8e"
+    },
+    {
+      "path": "source_archive/FOCUS_LAB_TAFRA_Deep_Study_Volume_01(1).pdf",
+      "size_bytes": 855177,
+      "sha256": "d71312539ba17b491f22672c206a5365650d80ffb9217b8850db3c807c6cde4d"
+    },
+    {
+      "path": "source_archive/FOCUS_LAB_TAFRA_Deep_Study_Volume_01.md",
+      "size_bytes": 94784,
+      "sha256": "f0fcbe269ecf91aa898322bf0a50cc72c16a0e0eec913c3a09ba2880a2ee8ff9"
+    },
+    {
+      "path": "source_archive/FOCUS_LAB_TAFRA_FINAL_INTEGRATED_RELEASE_2026-11-10.md",
+      "size_bytes": 787535,
+      "sha256": "8961197bc81d18b40426d5bd6731679841a3a81c1ecad78c55ef4f679987c91c"
+    },
+    {
+      "path": "source_archive/FOCUS_LAB_TAFRA_FINAL_INTEGRATED_RELEASE_2026-11-10.pdf",
+      "size_bytes": 1108459,
+      "sha256": "be1f85d35d42cefc46165288390ce190938184a1a7306c2c93ac6a184c3b667d"
+    },
+    {
+      "path": "source_archive/FOCUS_LAB_TAFRA_Master_Workflow_Expanded_2026-11-10.md",
+      "size_bytes": 665952,
+      "sha256": "41d9340d23d2f2cab19147bc0be228e799eb86fe7b5818199833813664695551"
+    },
+    {
+      "path": "source_archive/FOCUS_LAB_TAFRA_Master_Workflow_Expanded_2026-11-10.pdf",
+      "size_bytes": 1156062,
+      "sha256": "a00062631619a7d986d984abaef143719677c1a3fbfb3200fa017b71fbfb4423"
+    },
+    {
+      "path": "source_archive/FOCUS_LAB_TAFRA_VISUAL_MASTER_2026-11-10.pdf",
+      "size_bytes": 1407393,
+      "sha256": "f43dd1b920c01600272846c7a38ec76d76c7a67b241b05e05fd00db1cfc8ceee"
+    },
+    {
+      "path": "source_archive/TAFRA_DESIGN_EDITION_CONTENT_ENGINE_2026-11-10.xlsx",
+      "size_bytes": 3221266,
+      "sha256": "e0aa098b0de32b1075f80c6b1cf736354f555a39462479eef17f32ef51c94210"
+    },
+    {
+      "path": "source_archive/TAFRA_INTERACTIVE_COMMAND_CENTER_2026-11-10.html",
+      "size_bytes": 23942,
+      "sha256": "eefd732b0b31a3ba58e59b51b5af7efaaa0a8233b2744937f8e3688411fc079b"
+    },
+    {
+      "path": "source_archive/TAFRA_VISUAL_ATLAS_2026-11-10.pdf",
+      "size_bytes": 113265,
+      "sha256": "bd75c163c9b51eb9436fbc838799d4c08637f332078497c1482301ee547b523c"
+    },
+    {
+      "path": "تشغيل_المنتج_محليًا_بايثون.bat",
+      "size_bytes": 61,
+      "sha256": "6bb87a36b9ad01872d7e633b457f51841cf2d9caeca6fbf4fc28157d1ee78f53"
+    },
+    {
+      "path": "تشغيل_المنتج_ويندوز.bat",
+      "size_bytes": 39,
+      "sha256": "0edbd8f5b22789c3f11971244871f1b36e23f9e710fdc8b25ca6429165ec81be"
+    }
+  ]
+}

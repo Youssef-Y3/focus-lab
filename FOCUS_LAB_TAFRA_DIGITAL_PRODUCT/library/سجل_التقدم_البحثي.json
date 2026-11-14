@@ -1,0 +1,122 @@
+{
+  "project": "FOCUS LAB × TAFRA",
+  "volume": "المجلد الثاني — المكتبة العربية والإسلامية",
+  "last_updated": "2026-11-10",
+  "completed_this_run": [
+    {
+      "sequence": 2,
+      "work": "ذم الهوى",
+      "author": "أبو الفرج ابن الجوزي (ت 597هـ)",
+      "status": "core_book_study_completed_selective_deep_reading",
+      "coverage": [
+        "bibliographic comparison of the 1962 and 1993 editions, plus a separate Dar al-Jil digital edition",
+        "author and context",
+        "all 50 chapter headings and an analytical four-block architecture",
+        "close reading of chapters 1-4",
+        "close reading of selected passages in chapters 5-10, including sample hadith notes",
+        "structural analysis of chapters 11-34 based on the table of contents and selected excerpts",
+        "selective reading of chapters 35, 36, and 49; chapters 38-48 not yet analyzed story by story",
+        "critical appraisal and bounded mapping to FOCUS LAB / MASTERY OS / TAFRA / BE TAFRA"
+      ],
+      "limitations": [
+        "No independent manuscript collation in this run; the 1962 edition's catalogue record says it was based on Berlin and Paris manuscripts.",
+        "Not all hadith in the book were graded",
+        "Premodern physiological explanations are not current medical evidence",
+        "Page numbering differs by edition",
+        "Chapters 38-48 were not read story by story; the analysis uses their headings and selected thematic material."
+      ],
+      "bibliography": [
+        "1962 first edition: Dar al-Kutub al-Haditha, Cairo, 27+728 pages; catalog states it was based on Berlin and Paris manuscripts.",
+        "1993 second edition: Dar al-Kutub al-Ilmiyya, Beirut, 503 pages, corrected by Ahmad Abd al-Salam Ata.",
+        "A separate Dar al-Jil digital edition was consulted for selected hadith footnotes; page numbering is not transferable."
+      ]
+    }
+  ],
+  "next_item": {
+    "sequence": 3,
+    "work": "صيد الخاطر",
+    "author": "أبو الفرج ابن الجوزي",
+    "status": "next_after_sequence_01_verification"
+  },
+  "author_profile_note": "Ibn al-Jawzi already has a high-level author card in Deep Study Volume 01; this run completes the separate book-level study of Dhamm al-Hawa.",
+  "corrections_open": [
+    "The project file has inconsistent attribution for الفصل بين النفس والعقل (Sami vs Abdul Aziz al-Tarifi); pause direct quotation until title page and publisher data are verified.",
+    "The project card for التبيان includes corrupted text; do not quote it before checking the original."
+  ],
+  "method": "Separate primary text, external verification, analytical inference, and modern application. Deliver a report every run and preserve this progress file.",
+  "limitations": [
+    "Not all hadith in the book were graded.",
+    "Premodern physiological explanations are not current medical evidence.",
+    "Page numbering differs by edition."
+  ],
+  "correction_log": [
+    {
+      "date": "2026-11-10",
+      "issue": "الترتيب التالي في تقرير ذم الهوى المنفصل أورد إغاثة اللهفان بوصفه التالي.",
+      "correction": "الملف الموحّد يضع الفصل بين النفس والعقل في المرتبة 1 (معلّق للتحقق)، وذم الهوى في المرتبة 2، وصيد الخاطر في المرتبة 3.",
+      "action": "اعتماد قائمة الكتب العربية في الطبعة النهائية الموحّدة مرجعًا للترتيب. يأتي صيد الخاطر بعد حسم المدخل الأول أو توثيق سبب تجاوزه، ولا يبدأ إغاثة اللهفان قبل الكتب ذات الأولوية السابقة."
+    }
+  ],
+  "arabic_queue": [
+    {
+      "sequence": 1,
+      "work": "الفصل بين النفس والعقل",
+      "status": "blocked_attribution"
+    },
+    {
+      "sequence": 2,
+      "work": "ذم الهوى",
+      "status": "core_dossier_complete_selective_reading"
+    },
+    {
+      "sequence": 3,
+      "work": "صيد الخاطر",
+      "status": "next_available_after_blocker_review"
+    },
+    {
+      "sequence": 4,
+      "work": "تلبيس إبليس",
+      "status": "not_studied"
+    },
+    {
+      "sequence": 5,
+      "work": "إغاثة اللهفان من مصائد الشيطان",
+      "status": "not_studied"
+    },
+    {
+      "sequence": 6,
+      "work": "قيمة الزمن عند العلماء",
+      "status": "not_studied"
+    },
+    {
+      "sequence": 7,
+      "work": "تعليم المتعلم طريق التعلم",
+      "status": "not_studied"
+    },
+    {
+      "sequence": 8,
+      "work": "أدب الدنيا والدين",
+      "status": "not_studied"
+    },
+    {
+      "sequence": 9,
+      "work": "إحياء علوم الدين",
+      "status": "not_studied"
+    },
+    {
+      "sequence": 10,
+      "work": "الرعاية لحقوق الله",
+      "status": "not_studied"
+    },
+    {
+      "sequence": 11,
+      "work": "تذكرة السامع والمتكلم",
+      "status": "not_studied"
+    },
+    {
+      "sequence": 12,
+      "work": "التبيان في آداب حملة القرآن",
+      "status": "needs_source_text_cleanup"
+    }
+  ]
+}
