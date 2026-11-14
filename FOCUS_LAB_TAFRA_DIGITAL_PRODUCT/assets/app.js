@@ -39,9 +39,12 @@ function openPage(name){
   $$(".page").forEach(p=>p.classList.toggle("active",p.id===`page-${name}`));
   $$(".nav-item[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===name));
   const nav=$(`.nav-item[data-page="${name}"]`);
-  $("#currentSection").textContent=nav ? nav.querySelector("span:nth-child(2)")?.textContent || name : name;
-  $("#sidebar").classList.remove("open");
-  $("#mainScroll").scrollTo({top:0,behavior:"smooth"});
+  const curSec = $("#currentSection");
+  if(curSec) curSec.textContent=nav ? nav.querySelector("span:nth-child(2)")?.textContent || name : name;
+  const sidebar = $("#sidebar");
+  if(sidebar) sidebar.classList.remove("open");
+  const mainScroll = $("#mainScroll");
+  if(mainScroll) mainScroll.scrollTo({top:0,behavior:"smooth"});
   if(name==="overview") updateOverview();
   if(name==="student" && window.renderStudentHub) window.renderStudentHub();
   if(name==="learn") renderLearn();
@@ -654,35 +657,53 @@ function showSearchResults(q){
 function openCommand(){showSearchResults("");$("#commandPalette").classList.add("open");$("#commandInput").focus();}
 
 function bindEvents(){
- document.addEventListener("click",e=>{const c=e.target.closest(".copy-tool-output");if(c){const box=c.closest(".result-box");const clone=box.cloneNode(true);clone.querySelectorAll("button").forEach(b=>b.remove());copyText(clone.innerText.trim());}});
- $$(".nav-item[data-page]").forEach(b=>b.addEventListener("click",()=>openPage(b.dataset.page)));
- $$("[data-go]").forEach(b=>b.addEventListener("click",()=>openPage(b.dataset.go)));
- $$('[data-tabs="learn"] .tab').forEach(b=>b.addEventListener("click",()=>{learnTab=b.dataset.tab;selectedBook=null;renderLearn();}));
- $$('[data-tabs="tafra"] .tab').forEach(b=>b.addEventListener("click",()=>{tafraTab=b.dataset.tab;sheetSearch="";bankSearch="";renderTafra();}));
- $$('[data-tabs="betafra"] .tab').forEach(b=>b.addEventListener("click",()=>{betafraTab=b.dataset.tab;renderBetafra();}));
- $("#toolSearch").addEventListener("input",renderTools);$("#toolGroup").addEventListener("change",renderTools);
- $("#closeModal").onclick=closeTool;$("#closeModal2").onclick=closeTool;
- $("#toolModal").addEventListener("click",e=>{if(e.target.id==="toolModal")closeTool();});
- $("#mobileMenu").onclick=()=>$("#sidebar").classList.toggle("open");
- $("#quickAdd").onclick=()=>{openPage("mastery");setTimeout(()=>$("#taskForm input[name=title]")?.focus(),80);};
- $("#newTaskBtn").onclick=()=>$("#taskForm input[name=title]")?.focus();
- $("#taskForm").onsubmit=e=>{e.preventDefault();addTask(Object.fromEntries(new FormData(e.currentTarget)));e.currentTarget.reset();};
- $$("[data-taskfilter]").forEach(b=>b.onclick=()=>{taskFilter=b.dataset.taskfilter;$$("[data-taskfilter]").forEach(x=>x.classList.toggle("active",x===b));renderMastery();});
- $("#weeklyForm").onsubmit=e=>{e.preventDefault();const v=Object.fromEntries(new FormData(e.currentTarget));state.weeklyReviews.unshift({...v,id:Date.now(),at:nowISO()});state.weeklyReviews=state.weeklyReviews.slice(0,30);persist();e.currentTarget.reset();renderMastery();toast("تم حفظ المراجعة الأسبوعية");};
- $("#journeyStart").onchange=()=>{state.journey.startDate=$("#journeyStart").value;persist();renderJourney();};
- $("#researchNoteForm").onsubmit=e=>{e.preventDefault();const v=Object.fromEntries(new FormData(e.currentTarget));state.researchNotes.unshift({...v,id:Date.now(),at:nowISO()});state.researchNotes=state.researchNotes.slice(0,200);persist();e.currentTarget.reset();renderResearch();toast("حُفظت الملاحظة البحثية");};
- $("#exportData").onclick=exportUserData;
- $("#importData").onchange=e=>{const file=e.target.files?.[0];if(file)importUserData(file);e.target.value="";};
- $("#resetData").onclick=resetUserData;
- $("#globalSearch").addEventListener("keydown",e=>{if(e.key==="Enter")showSearchResults(e.target.value);});
- $("#globalSearch").addEventListener("focus",()=>{if(window.innerWidth<800){}});
- $("#commandInput").addEventListener("input",e=>showSearchResults(e.target.value));
- $("#commandInput").addEventListener("keydown",e=>{if(e.key==="Escape")$("#commandPalette").classList.remove("open");if(e.key==="Enter")$("#commandResults button")?.click();});
- $("#commandPalette").addEventListener("click",e=>{if(e.target.id==="commandPalette")$("#commandPalette").classList.remove("open");});
- document.addEventListener("keydown",e=>{
-   if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();openCommand();}
-   if(e.key==="Escape"){closeTool();$("#commandPalette").classList.remove("open");}
- });
+  document.addEventListener("click",e=>{const c=e.target.closest(".copy-tool-output");if(c){const box=c.closest(".result-box");const clone=box.cloneNode(true);clone.querySelectorAll("button").forEach(b=>b.remove());copyText(clone.innerText.trim());}});
+  $$(".nav-item[data-page]").forEach(b=>b.addEventListener("click",()=>openPage(b.dataset.page)));
+  $$("[data-go]").forEach(b=>b.addEventListener("click",()=>openPage(b.dataset.go)));
+  $$('[data-tabs="learn"] .tab').forEach(b=>b.addEventListener("click",()=>{learnTab=b.dataset.tab;selectedBook=null;renderLearn();}));
+  $$('[data-tabs="tafra"] .tab').forEach(b=>b.addEventListener("click",()=>{tafraTab=b.dataset.tab;sheetSearch="";bankSearch="";renderTafra();}));
+  $$('[data-tabs="betafra"] .tab').forEach(b=>b.addEventListener("click",()=>{betafraTab=b.dataset.tab;renderBetafra();}));
+  const ts=$("#toolSearch"), tg=$("#toolGroup");
+  if(ts) ts.addEventListener("input",renderTools);
+  if(tg) tg.addEventListener("change",renderTools);
+  const cm1=$("#closeModal"), cm2=$("#closeModal2"), tm=$("#toolModal");
+  if(cm1) cm1.onclick=closeTool;
+  if(cm2) cm2.onclick=closeTool;
+  if(tm) tm.addEventListener("click",e=>{if(e.target.id==="toolModal")closeTool();});
+  const mob=$("#mobileMenuBtn")||$("#mobileMenu");
+  if(mob) mob.onclick=()=>{const sb=$("#sidebar");if(sb)sb.classList.toggle("open");};
+  const qa=$("#quickAdd");
+  if(qa) qa.onclick=()=>{openPage("mastery");setTimeout(()=>$("#taskForm input[name=title]")?.focus(),80);};
+  const ntb=$("#newTaskBtn");
+  if(ntb) ntb.onclick=()=>$("#taskForm input[name=title]")?.focus();
+  const tf=$("#taskForm");
+  if(tf) tf.onsubmit=e=>{e.preventDefault();addTask(Object.fromEntries(new FormData(e.currentTarget)));e.currentTarget.reset();};
+  $$("[data-taskfilter]").forEach(b=>b.onclick=()=>{taskFilter=b.dataset.taskfilter;$$("[data-taskfilter]").forEach(x=>x.classList.toggle("active",x===b));renderMastery();});
+  const wf=$("#weeklyForm");
+  if(wf) wf.onsubmit=e=>{e.preventDefault();const v=Object.fromEntries(new FormData(e.currentTarget));state.weeklyReviews.unshift({...v,id:Date.now(),at:nowISO()});state.weeklyReviews=state.weeklyReviews.slice(0,30);persist();e.currentTarget.reset();renderMastery();toast("تم حفظ المراجعة الأسبوعية");};
+  const js=$("#journeyStart");
+  if(js) js.onchange=()=>{state.journey.startDate=js.value;persist();renderJourney();};
+  const rnf=$("#researchNoteForm");
+  if(rnf) rnf.onsubmit=e=>{e.preventDefault();const v=Object.fromEntries(new FormData(e.currentTarget));state.researchNotes.unshift({...v,id:Date.now(),at:nowISO()});state.researchNotes=state.researchNotes.slice(0,200);persist();e.currentTarget.reset();renderResearch();toast("حُفظت الملاحظة البحثية");};
+  const exp=$("#exportData"), imp=$("#importData"), rst=$("#resetData");
+  if(exp) exp.onclick=exportUserData;
+  if(imp) imp.onchange=e=>{const file=e.target.files?.[0];if(file)importUserData(file);e.target.value="";};
+  if(rst) rst.onclick=resetUserData;
+  const gs=$("#globalSearch");
+  if(gs){
+    gs.addEventListener("keydown",e=>{if(e.key==="Enter")showSearchResults(e.target.value);});
+    gs.addEventListener("focus",()=>{if(window.innerWidth<800){}});
+  }
+  const ci=$("#commandInput"), cp=$("#commandPalette");
+  if(ci){
+    ci.addEventListener("input",e=>showSearchResults(e.target.value));
+    ci.addEventListener("keydown",e=>{if(e.key==="Escape"&&cp)cp.classList.remove("open");if(e.key==="Enter")$("#commandResults button")?.click();});
+  }
+  if(cp) cp.addEventListener("click",e=>{if(e.target.id==="commandPalette")cp.classList.remove("open");});
+  document.addEventListener("keydown",e=>{
+    if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();openCommand();}
+    if(e.key==="Escape"){closeTool();const pal=$("#commandPalette");if(pal)pal.classList.remove("open");}
+  });
 }
 function init(){
   bindEvents();

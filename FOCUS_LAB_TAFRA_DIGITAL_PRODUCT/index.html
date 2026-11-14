@@ -182,6 +182,13 @@
     <button class="nav-item" data-page="archive"><svg class="feather-icon"><use xlink:href="#icon-archive"/></svg><span>الأرشيف والمصادر</span><kbd>09</kbd></button>
   </nav>
   <div class="sidebar-bottom">
+    <div class="sidebar-founder-card">
+      <img src="assets/founder.jpg" class="founder-sidebar-thumb" alt="TAFRA Founder" />
+      <div class="founder-sidebar-meta">
+        <span class="founder-name">TAFRA</span>
+        <span class="founder-role">Founder & Architect</span>
+      </div>
+    </div>
     <div class="local-status"><span class="status-dot"></span><span>وضع محلي آمن</span><small>OFFLINE READY</small></div>
     <button class="nav-item subtle" data-page="settings"><svg class="feather-icon"><use xlink:href="#icon-settings"/></svg><span>الإعدادات والبيانات</span></button>
     <div class="sidebar-version">VERSION 1.0.0 <span>·</span> NOV 2026</div>
@@ -311,46 +318,67 @@
       </button>
     </div>
 
-    <!-- Mindly-Style Floating Focus Capsules Ecosystem -->
-    <div class="mindly-floating-ecosystem">
-      <!-- Capsule 1: 40Hz Audio -->
-      <div class="focus-capsule-card capsule-audio" id="heroCapsuleAudio" data-track="binaural">
-        <div class="capsule-icon-wrap">🧠</div>
-        <div class="capsule-text">
-          <div class="capsule-title">40Hz Acoustic Lab</div>
-          <div class="capsule-desc">موجات جاما وعزل المشتتات</div>
+    <!-- Mindly-Style Central Stage with Founder Portrait & Orbiting Focus Capsules -->
+    <div class="hero-orbit-stage">
+      <!-- Orbit Left Flank (40Hz Audio & 120s SOS) -->
+      <div class="orbit-flank orbit-left">
+        <!-- Capsule 1: 40Hz Audio -->
+        <div class="focus-capsule-card capsule-audio" id="heroCapsuleAudio" data-track="binaural">
+          <div class="capsule-icon-wrap">🧠</div>
+          <div class="capsule-text">
+            <div class="capsule-title">40Hz Acoustic Lab</div>
+            <div class="capsule-desc">موجات جاما وعزل المشتتات</div>
+          </div>
+          <span class="capsule-chip-live">● حي</span>
         </div>
-        <span class="capsule-chip-live">● حي</span>
+
+        <!-- Capsule 2: SOS Rescue -->
+        <div class="focus-capsule-card capsule-sos" data-go="student">
+          <div class="capsule-icon-wrap">🚨</div>
+          <div class="capsule-text">
+            <div class="capsule-title">120s SOS Rescue</div>
+            <div class="capsule-desc">بروتوكول فك التسويف والشلل الذهني</div>
+          </div>
+          <span class="capsule-badge-hot">4 خطوات</span>
+        </div>
       </div>
 
-      <!-- Capsule 2: SOS Rescue -->
-      <div class="focus-capsule-card capsule-sos" data-go="student">
-        <div class="capsule-icon-wrap">🚨</div>
-        <div class="capsule-text">
-          <div class="capsule-title">120s SOS Rescue</div>
-          <div class="capsule-desc">بروتوكول فك التسويف والشلل الذهني</div>
+      <!-- Central Founder Mindly Showcase -->
+      <div class="founder-centerpiece">
+        <div class="founder-halo-aura"></div>
+        <div class="founder-portrait-card">
+          <img src="assets/founder.jpg" alt="TAFRA Founder" class="founder-photo" loading="eager" />
+          <div class="founder-glass-tag">
+            <div class="founder-tag-header">
+              <span class="founder-pulse-dot">●</span>
+              <span class="founder-tag-title">TAFRA // ARCHITECT & FOUNDER</span>
+            </div>
+            <div class="founder-tag-motto">«التركيز ليس صدفة، بل بنية تشغيلية وهندسة يومية.»</div>
+          </div>
         </div>
-        <span class="capsule-badge-hot">4 خطوات</span>
       </div>
 
-      <!-- Capsule 3: Study War-Room & XP -->
-      <div class="focus-capsule-card capsule-study" data-go="student">
-        <div class="capsule-icon-wrap">🎓</div>
-        <div class="capsule-text">
-          <div class="capsule-title">Study Sprint & XP</div>
-          <div class="capsule-desc">المذاكرة العميقة ومقسم المناهج</div>
+      <!-- Orbit Right Flank (Study Room & 26 Tools) -->
+      <div class="orbit-flank orbit-right">
+        <!-- Capsule 3: Study War-Room & XP -->
+        <div class="focus-capsule-card capsule-study" data-go="student">
+          <div class="capsule-icon-wrap">🎓</div>
+          <div class="capsule-text">
+            <div class="capsule-title">Study Sprint & XP</div>
+            <div class="capsule-desc">المذاكرة العميقة ومقسم المناهج</div>
+          </div>
+          <span class="capsule-badge-xp">+50 XP</span>
         </div>
-        <span class="capsule-badge-xp">+50 XP</span>
-      </div>
 
-      <!-- Capsule 4: 26 Tools Practice Lab -->
-      <div class="focus-capsule-card capsule-tools" data-go="tools">
-        <div class="capsule-icon-wrap">⚡</div>
-        <div class="capsule-text">
-          <div class="capsule-title">26 Execution Tools</div>
-          <div class="capsule-desc">تحويل النية إلى خطوة فورية</div>
+        <!-- Capsule 4: 26 Tools Practice Lab -->
+        <div class="focus-capsule-card capsule-tools" data-go="tools">
+          <div class="capsule-icon-wrap">⚡</div>
+          <div class="capsule-text">
+            <div class="capsule-title">26 Execution Tools</div>
+            <div class="capsule-desc">تحويل النية إلى خطوة فورية</div>
+          </div>
+          <span class="capsule-badge-count">26 أداة</span>
         </div>
-        <span class="capsule-badge-count">26 أداة</span>
       </div>
     </div>
 

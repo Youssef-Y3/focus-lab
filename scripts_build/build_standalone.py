@@ -42,6 +42,14 @@ if os.path.exists(favicon_path):
     fav_data_uri = f'data:image/svg+xml;base64,{fav_b64}'
     html = html.replace('href="assets/favicon.svg"', f'href="{fav_data_uri}"')
 
+# In-line founder photo if present
+founder_path = os.path.join(base_dir, 'assets', 'founder.jpg')
+if os.path.exists(founder_path):
+    with open(founder_path, 'rb') as f:
+        founder_b64 = base64.b64encode(f.read()).decode('utf-8')
+    founder_data_uri = f'data:image/jpeg;base64,{founder_b64}'
+    html = html.replace('src="assets/founder.jpg"', f'src="{founder_data_uri}"')
+
 # Insert combined CSS before </head>
 html = html.replace('</head>', f'{combined_css}\n</head>')
 

@@ -2126,6 +2126,7 @@
     initWorkflowHub();
     initSolFloatingDock();
     initSpotlightTracker();
+    renderStudentHub();
     
     // Periodically sync equalizer
     setInterval(updateAudioVisualizers, 800);
