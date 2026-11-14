@@ -1449,29 +1449,18 @@
   }
 
   function initTheme() {
-    const saved = localStorage.getItem("focus_app_theme") || "dark";
+    const saved = localStorage.getItem("focus_app_theme") || "light";
     document.documentElement.setAttribute("data-theme", saved);
     syncThemeUI(saved);
   }
 
   function toggleTheme() {
     if (audio && audio.playClick) audio.playClick();
-    const current = document.documentElement.getAttribute("data-theme") || "dark";
-    let next = "light";
-    if (current === "dark") next = "light";
-    else if (current === "light") next = "neo";
-    else next = "dark";
-
+    const current = document.documentElement.getAttribute("data-theme") || "light";
+    const next = current === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
     localStorage.setItem("focus_app_theme", next);
     syncThemeUI(next);
-
-    const toastNames = {
-      dark: "الوضع الليلي الكلاسيكي 🌙",
-      light: "الوضع النهاري المضيء ☀️",
-      neo: "وضع النيون التفاعلي ⚡ (NEO GLOW)"
-    };
-    if (window.APP?.toast) window.APP.toast(`تم التبديل إلى ${toastNames[next] || next}`);
   }
 
   // =========================================================================
@@ -1898,21 +1887,30 @@
   }
 
   function updateAudioVisualizers() {
-    const dockWave = document.getElementById("dockSoundwave");
-    const dockAudioLabel = document.getElementById("dockAudioLabel");
     const headerBtn = document.getElementById("headerAudioBtn");
+    const bentoBars = document.getElementById("bentoAudioBars");
+    const bentoBtn = document.getElementById("bentoAudioToggleBtn");
+    const heroCapsule = document.getElementById("heroCapsuleAudio");
+    const audioTrackLabel = document.getElementById("audioTrackName");
     const isPlaying = !!(window.FocusAudio && window.FocusAudio.currentTrack);
 
-    if (dockWave) {
-      if (isPlaying) dockWave.classList.add("playing");
-      else dockWave.classList.remove("playing");
-    }
-    if (dockAudioLabel) {
-      dockAudioLabel.textContent = isPlaying ? (window.FocusAudio.currentTrack === "binaural" ? "موجات 40Hz" : "صوت المطر") : "الصوت الحي";
-    }
     if (headerBtn) {
-      if (isPlaying) headerBtn.classList.add("playing");
-      else headerBtn.classList.remove("playing");
+      headerBtn.classList.toggle("playing", isPlaying);
+    }
+    if (audioTrackLabel) {
+      const names = { binaural: "موجات 40Hz", brown: "ضوضاء بنية", rain: "صوت المطر" };
+      audioTrackLabel.textContent = isPlaying ? (names[window.FocusAudio.currentTrack] || "الصوت الحي") : "أصوات 40Hz";
+    }
+    if (bentoBars) {
+      bentoBars.classList.toggle("active", isPlaying);
+    }
+    if (bentoBtn) {
+      bentoBtn.innerHTML = isPlaying ? '<span>⏹ إيقاف الصوت الحي</span>' : '<span>🎧 تشغيل الصوت الحي</span>';
+    }
+    if (heroCapsule) {
+      heroCapsule.classList.toggle("playing", isPlaying);
+      const chip = heroCapsule.querySelector(".capsule-chip-live");
+      if (chip) chip.textContent = isPlaying ? "● يعمل الآن" : "● حي";
     }
   }
 
@@ -2011,6 +2009,20 @@
   // 12. BENTO & STUDIO HERO CONTROLLERS (SHOWREEL & MYSTACK)
   // =========================================================================
   function initBentoAndHero() {
+    const heroAudioCapsule = document.getElementById("heroCapsuleAudio");
+    if (heroAudioCapsule) {
+      heroAudioCapsule.onclick = () => {
+        if (window.FocusAudio) {
+          window.FocusAudio.playClick();
+          if (window.FocusAudio.currentTrack) {
+            window.FocusAudio.stop();
+          } else {
+            window.FocusAudio.play40HzTone();
+          }
+          updateAudioVisualizers();
+        }
+      };
+    }
     const heroWorkflowBtn = document.getElementById("heroScrollWorkflowBtn");
     if (heroWorkflowBtn) {
       heroWorkflowBtn.onclick = () => {

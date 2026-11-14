@@ -1,3 +1,7 @@
+"""
+FOCUS LAB × TAFRA OS — Standalone Bundler (2026 Master Edition)
+Inlines all HTML, CSS, SVG sprites, and JavaScript into a single 100% self-contained offline application.
+"""
 import os
 import base64
 
@@ -8,10 +12,6 @@ modern_css_path = os.path.join(base_dir, 'assets', 'modern.css')
 data_js_path = os.path.join(base_dir, 'assets', 'data.js')
 corpus_js_path = os.path.join(base_dir, 'assets', 'corpus.js')
 app_js_path = os.path.join(base_dir, 'assets', 'app.js')
-three_js_path = os.path.join(base_dir, 'assets', 'three.min.js')
-hero_shader_js_path = os.path.join(base_dir, 'assets', 'hero_shader.js')
-radial_nav_js_path = os.path.join(base_dir, 'assets', 'radial_nav.js')
-three_bento_js_path = os.path.join(base_dir, 'assets', 'three_bento.js')
 student_js_path = os.path.join(base_dir, 'assets', 'student-hub.js')
 favicon_path = os.path.join(base_dir, 'assets', 'favicon.svg')
 
@@ -55,18 +55,6 @@ with open(corpus_js_path, 'r', encoding='utf-8') as f:
 with open(app_js_path, 'r', encoding='utf-8') as f:
     app_js = f.read()
 
-with open(three_js_path, 'r', encoding='utf-8') as f:
-    three_js = f.read()
-
-with open(hero_shader_js_path, 'r', encoding='utf-8') as f:
-    hero_shader_js = f.read()
-
-with open(radial_nav_js_path, 'r', encoding='utf-8') as f:
-    radial_nav_js = f.read()
-
-with open(three_bento_js_path, 'r', encoding='utf-8') as f:
-    three_bento_js = f.read()
-
 with open(student_js_path, 'r', encoding='utf-8') as f:
     student_js = f.read()
 
@@ -79,18 +67,6 @@ inlined_scripts = f"""
 </script>
 <script>
 {app_js}
-</script>
-<script>
-{three_js}
-</script>
-<script>
-{hero_shader_js}
-</script>
-<script>
-{radial_nav_js}
-</script>
-<script>
-{three_bento_js}
 </script>
 <script>
 {student_js}
@@ -123,3 +99,4 @@ out_path_2 = 'منصة_التركيز_والماستري_للشباب.html'
 with open(out_path_2, 'w', encoding='utf-8') as f:
     f.write(html)
 print(f"Generated root standalone: {out_path_2} ({os.path.getsize(out_path_2)} bytes)")
+print("Standalone build successful!")

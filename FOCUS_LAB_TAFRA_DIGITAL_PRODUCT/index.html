@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="#10283a" name="theme-color"/>
+<meta content="#faf9f7" name="theme-color"/>
 <link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
 <meta content="FOCUS LAB × TAFRA OS — مساحة متكاملة للتعلم وإدارة التركيز والتنفيذ وصناعة المحتوى والبحث." name="description"/>
 <title>FOCUS LAB × TAFRA OS</title>
@@ -136,104 +136,131 @@
 
 
 <div class="app-shell">
-<nav class="floating-nav glass-morph" id="sidebar">
-  <button class="radial-center-trigger" id="radialToggleBtn" aria-label="تبديل القائمة الدائرية" title="فتح / إغلاق القائمة">
-    <div class="radial-pulse-ring"></div>
-    <div class="radial-core-glow"></div>
-    <span class="radial-trigger-icon">
-      <svg class="feather-icon trigger-open"><use xlink:href="#icon-compass"/></svg>
-      <svg class="feather-icon trigger-close"><use xlink:href="#icon-x"/></svg>
-    </span>
-  </button>
-  <div class="radial-menu-items" id="radialMenuItems">
-    <button class="nav-item radial-btn active" data-page="overview" data-tooltip="الرئيسية" title="الرئيسية">
-      <svg class="feather-icon"><use xlink:href="#icon-home"/></svg>
-      <span class="radial-tooltip">الرئيسية</span>
-    </button>
-    <button class="nav-item radial-btn" data-page="student" data-tooltip="بوابة شباب الجامعة" title="بوابة شباب الجامعة">
-      <svg class="feather-icon"><use xlink:href="#icon-graduation"/></svg>
-      <span class="radial-tooltip">بوابة شباب الجامعة</span>
-    </button>
-    <button class="nav-item radial-btn" data-page="learn" data-tooltip="FOCUS LEARN" title="FOCUS LEARN">
-      <svg class="feather-icon"><use xlink:href="#icon-book"/></svg>
-      <span class="radial-tooltip">FOCUS LEARN</span>
-    </button>
-    <button class="nav-item radial-btn" data-page="tools" data-tooltip="FOCUS TOOLS" title="FOCUS TOOLS">
-      <svg class="feather-icon"><use xlink:href="#icon-tool"/></svg>
-      <span class="radial-tooltip">FOCUS TOOLS</span>
-    </button>
-    <button class="nav-item radial-btn" data-page="journey" data-tooltip="رحلة 28 يومًا" title="رحلة 28 يومًا">
-      <svg class="feather-icon"><use xlink:href="#icon-compass"/></svg>
-      <span class="radial-tooltip">رحلة 28 يومًا</span>
-    </button>
-    <button class="nav-item radial-btn" data-page="mastery" data-tooltip="MASTERY OS" title="MASTERY OS">
-      <svg class="feather-icon"><use xlink:href="#icon-award"/></svg>
-      <span class="radial-tooltip">MASTERY OS</span>
-    </button>
-    <button class="nav-item radial-btn" data-page="tafra" data-tooltip="TAFRA ENGINE" title="TAFRA ENGINE">
-      <svg class="feather-icon"><use xlink:href="#icon-zap"/></svg>
-      <span class="radial-tooltip">TAFRA ENGINE</span>
-    </button>
-    <button class="nav-item radial-btn" data-page="betafra" data-tooltip="BE TAFRA" title="BE TAFRA">
-      <svg class="feather-icon"><use xlink:href="#icon-star"/></svg>
-      <span class="radial-tooltip">BE TAFRA</span>
-    </button>
-    <button class="nav-item radial-btn" data-page="research" data-tooltip="مكتب البحث" title="مكتب البحث">
-      <svg class="feather-icon"><use xlink:href="#icon-search"/></svg>
-      <span class="radial-tooltip">مكتب البحث</span>
-    </button>
-    <button class="nav-item radial-btn" data-page="archive" data-tooltip="الأرشيف والمصادر" title="الأرشيف والمصادر">
-      <svg class="feather-icon"><use xlink:href="#icon-archive"/></svg>
-      <span class="radial-tooltip">الأرشيف والمصادر</span>
-    </button>
-    <button class="nav-item radial-btn subtle" data-page="settings" data-tooltip="الإعدادات والبيانات" title="الإعدادات والبيانات">
-      <svg class="feather-icon"><use xlink:href="#icon-settings"/></svg>
-      <span class="radial-tooltip">الإعدادات والبيانات</span>
-    </button>
+<aside class="sidebar" id="sidebar">
+  <div class="brand-lockup">
+<div class="brand-mark-prism" data-go="overview" style="cursor:pointer;" title="FOCUS LAB × TAFRA">
+  <svg viewBox="0 0 44 44" class="brand-logo-svg" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="prismAuraLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FF6B35"/>
+        <stop offset="50%" stop-color="#FFA826"/>
+        <stop offset="100%" stop-color="#00D2FF"/>
+      </linearGradient>
+      <linearGradient id="coreBeamLogo" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#FF6B35"/>
+        <stop offset="100%" stop-color="#00F0FF"/>
+      </linearGradient>
+    </defs>
+    <rect width="44" height="44" rx="12" fill="#0D1117" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <g transform="translate(22, 22)">
+      <polygon points="0,-16 13.86,-8 13.86,8 0,16 -13.86,8 -13.86,-8" stroke="rgba(255,255,255,0.2)" stroke-width="1.2" fill="none"/>
+      <circle cx="0" cy="0" r="4.5" fill="url(#prismAuraLogo)"/>
+      <circle cx="0" cy="0" r="2" fill="#FFFFFF"/>
+      <line x1="-11" y1="0" x2="-6" y2="0" stroke="url(#coreBeamLogo)" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="6" y1="0" x2="11" y2="0" stroke="url(#coreBeamLogo)" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="-11" x2="0" y2="-6" stroke="url(#coreBeamLogo)" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="6" x2="0" y2="11" stroke="url(#coreBeamLogo)" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </svg>
+  <div class="brand-text-block">
+    <div class="brand-name-main">FOCUS LAB <span class="brand-spark-dot">●</span> TAFRA</div>
+    <div class="brand-sub-tag">THE OPERATING SPACE // 2026</div>
   </div>
-</nav>
+</div>
+</div>
+  <div class="sidebar-label">مساحة العمل</div>
+  <nav aria-label="التنقل الرئيسي" class="primary-nav">
+    <button class="nav-item active" data-page="overview"><svg class="feather-icon"><use xlink:href="#icon-home"/></svg><span>الرئيسية</span><kbd>01</kbd></button>
+    <button class="nav-item" data-page="student"><svg class="feather-icon"><use xlink:href="#icon-graduation"/></svg><span>بوابة شباب الجامعة</span><kbd>★</kbd></button>
+    <button class="nav-item" data-page="learn"><svg class="feather-icon"><use xlink:href="#icon-book"/></svg><span>FOCUS LEARN</span><kbd>02</kbd></button>
+    <button class="nav-item" data-page="tools"><svg class="feather-icon"><use xlink:href="#icon-tool"/></svg><span>FOCUS TOOLS</span><kbd>03</kbd></button>
+    <button class="nav-item" data-page="journey"><svg class="feather-icon"><use xlink:href="#icon-compass"/></svg><span>رحلة 28 يومًا</span><kbd>04</kbd></button>
+    <button class="nav-item" data-page="mastery"><svg class="feather-icon"><use xlink:href="#icon-award"/></svg><span>MASTERY OS</span><kbd>05</kbd></button>
+    <button class="nav-item" data-page="tafra"><svg class="feather-icon"><use xlink:href="#icon-zap"/></svg><span>TAFRA ENGINE</span><kbd>06</kbd></button>
+    <button class="nav-item" data-page="betafra"><svg class="feather-icon"><use xlink:href="#icon-star"/></svg><span>BE TAFRA</span><kbd>07</kbd></button>
+    <button class="nav-item" data-page="research"><svg class="feather-icon"><use xlink:href="#icon-search"/></svg><span>مكتب البحث</span><kbd>08</kbd></button>
+    <button class="nav-item" data-page="archive"><svg class="feather-icon"><use xlink:href="#icon-archive"/></svg><span>الأرشيف والمصادر</span><kbd>09</kbd></button>
+  </nav>
+  <div class="sidebar-bottom">
+    <div class="local-status"><span class="status-dot"></span><span>وضع محلي آمن</span><small>OFFLINE READY</small></div>
+    <button class="nav-item subtle" data-page="settings"><svg class="feather-icon"><use xlink:href="#icon-settings"/></svg><span>الإعدادات والبيانات</span></button>
+    <div class="sidebar-version">VERSION 1.0.0 <span>·</span> NOV 2026</div>
+  </div>
+</aside>
 <main class="main-area">
 
 <header class="studio-topbar" id="studioTopbar">
   <div class="topbar-inner">
-    <div class="brand-lockup-top" data-go="overview" style="cursor:pointer;" title="العودة للرئيسية">
-      <div class="brand-mark-glow"><span>F</span><i>×</i><span>T</span></div>
-      <div>
-        <div class="brand-name-top">FOCUS LAB <b>×</b> TAFRA</div>
-        <div class="brand-sub-top">THE OPERATING SPACE // 2026</div>
-      </div>
+    <div class="topbar-left-brand">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" title="القائمة"><svg class="feather-icon"><use xlink:href="#icon-tool"/></svg></button>
+      <div class="brand-mark-prism" data-go="overview" style="cursor:pointer;" title="FOCUS LAB × TAFRA">
+  <svg viewBox="0 0 44 44" class="brand-logo-svg" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="prismAuraLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FF6B35"/>
+        <stop offset="50%" stop-color="#FFA826"/>
+        <stop offset="100%" stop-color="#00D2FF"/>
+      </linearGradient>
+      <linearGradient id="coreBeamLogo" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#FF6B35"/>
+        <stop offset="100%" stop-color="#00F0FF"/>
+      </linearGradient>
+    </defs>
+    <rect width="44" height="44" rx="12" fill="#0D1117" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <g transform="translate(22, 22)">
+      <polygon points="0,-16 13.86,-8 13.86,8 0,16 -13.86,8 -13.86,-8" stroke="rgba(255,255,255,0.2)" stroke-width="1.2" fill="none"/>
+      <circle cx="0" cy="0" r="4.5" fill="url(#prismAuraLogo)"/>
+      <circle cx="0" cy="0" r="2" fill="#FFFFFF"/>
+      <line x1="-11" y1="0" x2="-6" y2="0" stroke="url(#coreBeamLogo)" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="6" y1="0" x2="11" y2="0" stroke="url(#coreBeamLogo)" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="-11" x2="0" y2="-6" stroke="url(#coreBeamLogo)" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="6" x2="0" y2="11" stroke="url(#coreBeamLogo)" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </svg>
+  <div class="brand-text-block">
+    <div class="brand-name-main">FOCUS LAB <span class="brand-spark-dot">●</span> TAFRA</div>
+    <div class="brand-sub-tag">THE OPERATING SPACE // 2026</div>
+  </div>
+</div>
     </div>
 
+    <!-- Center Navigation Pills (Mindly / Contra style) -->
     <nav class="studio-nav-pills" id="studioNavPills">
       <button class="nav-item active" data-page="overview"><svg class="feather-icon"><use xlink:href="#icon-home"/></svg><span>الرئيسية</span></button>
-      <button class="nav-item student-pill-highlight" data-page="student"><svg class="feather-icon"><use xlink:href="#icon-graduation"/></svg><span>بوابة الشباب</span><span class="pill-spark">★</span></button>
-      <button class="nav-item" data-page="learn"><span class="nav-icon">◈</span><span>المكتبة</span></button>
-      <button class="nav-item" data-page="tools"><span class="nav-icon">✳</span><span>الأدوات</span></button>
-      <button class="nav-item" data-page="journey"><span class="nav-icon">↗</span><span>رحلة 28</span></button>
-      <button class="nav-item" data-page="tafra"><span class="nav-icon">✦</span><span>المحتوى</span></button>
-      <button class="nav-item" data-page="mastery"><span class="nav-icon">▦</span><span>الماستري</span></button>
-      <button class="nav-item" data-page="research"><span class="nav-icon">⌕</span><span>البحث</span></button>
-      <button class="nav-item" data-page="archive"><span class="nav-icon">▤</span><span>الأرشيف</span></button>
-      <button class="nav-item" data-page="settings"><span class="nav-icon">⚙</span><span>الإعدادات</span></button>
+      <button class="nav-item student-pill" data-page="student"><svg class="feather-icon"><use xlink:href="#icon-graduation"/></svg><span>بوابة الشباب</span><span class="badge-spark">★</span></button>
+      <button class="nav-item" data-page="learn"><svg class="feather-icon"><use xlink:href="#icon-book"/></svg><span>المكتبة</span></button>
+      <button class="nav-item" data-page="tools"><svg class="feather-icon"><use xlink:href="#icon-tool"/></svg><span>الأدوات (26)</span></button>
+      <button class="nav-item" data-page="journey"><svg class="feather-icon"><use xlink:href="#icon-compass"/></svg><span>الرحلة (28)</span></button>
+      <button class="nav-item" data-page="mastery"><svg class="feather-icon"><use xlink:href="#icon-award"/></svg><span>الماستري</span></button>
+      <button class="nav-item" data-page="tafra"><svg class="feather-icon"><use xlink:href="#icon-zap"/></svg><span>المحتوى</span></button>
+      <button class="nav-item" data-page="research"><svg class="feather-icon"><use xlink:href="#icon-search"/></svg><span>البحث</span></button>
+      <button class="nav-item" data-page="archive"><svg class="feather-icon"><use xlink:href="#icon-archive"/></svg><span>الأرشيف</span></button>
     </nav>
 
+    <!-- Topbar Actions Cluster -->
     <div class="topbar-actions-cluster">
-      <button class="audio-ctrl-btn" id="headerAudioBtn" title="أصوات التركيز والمذاكرة">
-        <span class="dock-soundwave"><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i></span>
+      <button class="topbar-audio-btn" id="headerAudioBtn" title="أصوات التركيز 40Hz">
+        <span class="audio-equalizer-mini" id="headerAudioWave">
+          <i class="wave-bar"></i><i class="wave-bar"></i><i class="wave-bar"></i><i class="wave-bar"></i>
+        </span>
         <span id="audioTrackName">الصوت الحي</span>
       </button>
-      <button class="sos-header-btn" id="headerSosBtn" title="طوارئ التسويف">
-        <span>🚨</span>
-        <span>طوارئ التسويف</span>
+
+      <button class="topbar-sos-btn" id="headerSosBtn" title="طوارئ التسويف الفورية">
+        <span class="sos-beacon"></span>
+        <svg class="feather-icon"><use xlink:href="#icon-zap"/></svg>
+        <span>طوارئ 120s</span>
       </button>
-      <div class="student-streak-badge" id="headerStreakBadge">🔥 <span id="headerStreakCount">3</span> أيام</div>
-      <label class="global-search-pill">
-        <span>⌕</span>
+
+      <label class="search-pill-compact" title="بحث شامل (⌘K)">
+        <svg class="feather-icon"><use xlink:href="#icon-search"/></svg>
         <input id="globalSearch" placeholder="بحث شامل..." type="search"/>
         <kbd>⌘K</kbd>
       </label>
-      <button class="theme-toggle-btn" id="themeToggleBtn" title="تبديل المظهر">🌓</button>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" title="القائمة الجانبية">☰</button>
+
+      <button class="theme-toggle-btn" id="themeToggleBtn" title="تبديل المظهر">
+        <svg class="feather-icon"><use xlink:href="#icon-sun"/></svg>
+      </button>
     </div>
   </div>
 </header>
@@ -241,83 +268,127 @@
 <div class="main-scroll" id="mainScroll">
 <section class="page active" id="page-overview">
 
-<div class="studio-hero-section spotlight-card">
-  <canvas id="heroAuroraCanvas" class="hero-aurora-canvas"></canvas>
-  <button class="hero-fullscreen-btn" id="heroFullscreenBtn" aria-label="ملء الشاشة" title="ملء الشاشة للتركيز الشامل">
-    <svg class="feather-icon"><use xlink:href="#icon-maximize"/></svg>
-  </button>
-  <div class="hero-aurora-glow"></div>
-  
-  <div class="hero-content">
-    <div class="hero-telemetry-badge">
-      <span class="pulse-beacon"></span>
-      <span class="mono-code">SYS.OS // 2026.STUDIO</span>
-      <span class="badge-pipe">|</span>
-      <span class="highlight-text">FOCUS LAB × TAFRA</span>
-      <span class="badge-tag">OFFLINE READY</span>
+<div class="mindly-hero-stage">
+  <!-- Sol Ambient Sunset Aura -->
+  <div class="sol-ambient-aura"></div>
+  <div class="sol-secondary-aura"></div>
+
+  <div class="hero-editorial-center">
+    <!-- Telemetry Kicker -->
+    <div class="hero-telemetry-capsule">
+      <span class="pulse-beacon-live"></span>
+      <span class="telemetry-mono">FOCUS LAB × TAFRA // 2026 MASTER EDITION</span>
+      <span class="telemetry-pipe">|</span>
+      <span class="telemetry-highlight">OFFLINE READY · يعمل محلياً 100%</span>
     </div>
 
-    <h1 class="hero-display-headline">
-      من المعرفة إلى الفعل.<br/>
-      <span class="solar-gradient-heading">ومن الفعل إلى الإتقان المطلق.</span>
+    <!-- Master Editorial Title (Mindly Style) -->
+    <h1 class="hero-master-headline">
+      صفاء الذهن،<br/>
+      <span class="hero-gradient-text">وقوة الفعل والإتقان المطلق.</span>
     </h1>
 
-    <p class="hero-editorial-lead">
-      المساحة التشغيلية الموحدة لشباب وصُنّاع المستقبل — تجمع بين أسرار التركيز البيولوجي، ومختبر الـ 26 أداة تنفيذية، وخارطة الـ 28 يوماً، ومحرك صناعة المحتوى والأثر الرقمي — مصممة لتعمل محلياً بالكامل وبأعلى معايير التصميم العالمية.
+    <p class="hero-master-lead">
+      المساحة التشغيلية الذكية لشباب وصُنّاع المستقبل — تجمع بين أسرار التركيز البيولوجي (40Hz)، ومختبر الـ 26 أداة تنفيذية، وخارطة الـ 28 يوماً، ومحرك صناعة المحتوى والأثر الرقمي، في واجهة واحدة صُممت بأرقى معايير التصميم العالمية.
     </p>
 
-    <div class="hero-cta-cluster">
-      <button class="btn btn-hero-gold" data-go="student">
-        <span class="btn-icon">🎓</span>
+    <!-- High-Impact Dual CTAs -->
+    <div class="hero-action-row">
+      <button class="btn btn-primary-pill" data-go="student">
+        <svg class="feather-icon"><use xlink:href="#icon-graduation"/></svg>
         <span>ادخل بوابة شباب الجامعة (Study Room)</span>
-        <span class="btn-arrow">←</span>
+        <span class="arrow-glyph">←</span>
       </button>
-      <button class="btn btn-hero-cyan" id="heroScrollWorkflowBtn">
-        <span class="btn-icon">⚡</span>
+
+      <button class="btn btn-secondary-pill" id="heroScrollWorkflowBtn">
+        <svg class="feather-icon"><use xlink:href="#icon-zap"/></svg>
         <span>محرك سير العمل الذكي</span>
       </button>
-      <button class="btn btn-hero-ghost" data-go="tools">
-        <span class="btn-icon">✳</span>
+
+      <button class="btn btn-ghost-pill" data-go="tools">
+        <svg class="feather-icon"><use xlink:href="#icon-tool"/></svg>
         <span>مختبر الـ 26 أداة</span>
       </button>
     </div>
 
-    <div class="hero-stats-ticker">
-      <div class="stat-pill"><span class="pill-num">4,175</span><span class="pill-lbl">أصل معرفي ومحتوى</span></div>
-      <span class="stat-bullet">·</span>
-      <div class="stat-pill"><span class="pill-num">26</span><span class="pill-lbl">بروتوكولاً تنفيذياً</span></div>
-      <span class="stat-bullet">·</span>
-      <div class="stat-pill"><span class="pill-num">28</span><span class="pill-lbl">يوماً لبناء العادات</span></div>
-      <span class="stat-bullet">·</span>
-      <div class="stat-pill"><span class="pill-num">40Hz</span><span class="pill-lbl">موجات جاما للتركيز</span></div>
-      <span class="stat-bullet">·</span>
-      <div class="stat-pill status-live"><span>● يعمل محلياً 100%</span></div>
+    <!-- Mindly-Style Floating Focus Capsules Ecosystem -->
+    <div class="mindly-floating-ecosystem">
+      <!-- Capsule 1: 40Hz Audio -->
+      <div class="focus-capsule-card capsule-audio" id="heroCapsuleAudio" data-track="binaural">
+        <div class="capsule-icon-wrap">🧠</div>
+        <div class="capsule-text">
+          <div class="capsule-title">40Hz Acoustic Lab</div>
+          <div class="capsule-desc">موجات جاما وعزل المشتتات</div>
+        </div>
+        <span class="capsule-chip-live">● حي</span>
+      </div>
+
+      <!-- Capsule 2: SOS Rescue -->
+      <div class="focus-capsule-card capsule-sos" data-go="student">
+        <div class="capsule-icon-wrap">🚨</div>
+        <div class="capsule-text">
+          <div class="capsule-title">120s SOS Rescue</div>
+          <div class="capsule-desc">بروتوكول فك التسويف والشلل الذهني</div>
+        </div>
+        <span class="capsule-badge-hot">4 خطوات</span>
+      </div>
+
+      <!-- Capsule 3: Study War-Room & XP -->
+      <div class="focus-capsule-card capsule-study" data-go="student">
+        <div class="capsule-icon-wrap">🎓</div>
+        <div class="capsule-text">
+          <div class="capsule-title">Study Sprint & XP</div>
+          <div class="capsule-desc">المذاكرة العميقة ومقسم المناهج</div>
+        </div>
+        <span class="capsule-badge-xp">+50 XP</span>
+      </div>
+
+      <!-- Capsule 4: 26 Tools Practice Lab -->
+      <div class="focus-capsule-card capsule-tools" data-go="tools">
+        <div class="capsule-icon-wrap">⚡</div>
+        <div class="capsule-text">
+          <div class="capsule-title">26 Execution Tools</div>
+          <div class="capsule-desc">تحويل النية إلى خطوة فورية</div>
+        </div>
+        <span class="capsule-badge-count">26 أداة</span>
+      </div>
+    </div>
+
+    <!-- Live Telemetry Stats Ticker -->
+    <div class="hero-metrics-ribbon">
+      <div class="ribbon-item">
+        <span class="ribbon-num">4,175</span>
+        <span class="ribbon-label">أصل معرفي ومحتوى</span>
+      </div>
+      <span class="ribbon-separator">/</span>
+      <div class="ribbon-item">
+        <span class="ribbon-num">26</span>
+        <span class="ribbon-label">بروتوكولاً تنفيذياً</span>
+      </div>
+      <span class="ribbon-separator">/</span>
+      <div class="ribbon-item">
+        <span class="ribbon-num">28</span>
+        <span class="ribbon-label">يوماً لبناء العادات</span>
+      </div>
+      <span class="ribbon-separator">/</span>
+      <div class="ribbon-item">
+        <span class="ribbon-num">40Hz</span>
+        <span class="ribbon-label">موجات جاما للتركيز</span>
+      </div>
+      <span class="ribbon-separator">/</span>
+      <div class="ribbon-item ribbon-live">
+        <span class="live-dot-green">●</span>
+        <span>نظام محلي آمن 100%</span>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- Bento Live Showcase (Showreel & MyStack Inspired) -->
-<div class="bento-3d-wrapper">
-  <div class="bento-view-controls">
-    <div class="bento-view-heading">
-      <span class="live-pulse"></span>
-      <span>مساحة الاستكشاف التفاعلية (SPATIAL 3D BENTO)</span>
-    </div>
-    <div class="bento-toggle-group">
-      <button class="bento-toggle-btn active" id="bentoMode3D" title="عرض ثلاثي الأبعاد تفاعلي">
-        <svg class="feather-icon"><use xlink:href="#icon-box"/></svg>
-        <span>3D مكعبات فضائية</span>
-      </button>
-      <button class="bento-toggle-btn" id="bentoModeGrid" title="عرض الشبكة التقليدية">
-        <svg class="feather-icon"><use xlink:href="#icon-archive"/></svg>
-        <span>شبكة مسطحة (Grid)</span>
-      </button>
-    </div>
-  </div>
 
-  <div class="three-bento-container" id="threeBentoContainer">
-    <canvas id="threeBentoCanvas" class="three-bento-canvas"></canvas>
-  </div>
+  
+
+  
 
   <div class="bento-showcase-grid">
   <!-- Card 1: 40Hz Live Audio Synthesizer -->
@@ -345,7 +416,7 @@
   <div class="bento-showcase-card spotlight-card sos-bento">
     <div class="bento-card-header">
       <div class="bento-tag">[ 120s SOS RESCUE ]</div>
-      <span style="font-size:16px;">🚨</span>
+      <svg class="feather-icon bento-icon"><use xlink:href="#icon-zap"/></svg>
     </div>
     <div class="bento-card-body">
       <h3>طوارئ كسر التسويف</h3>
@@ -367,7 +438,7 @@
   <div class="bento-showcase-card spotlight-card recall-bento">
     <div class="bento-card-header">
       <div class="bento-tag">[ ACTIVE RECALL 3D ]</div>
-      <span style="font-size:16px;">🧠</span>
+      <svg class="feather-icon bento-icon"><use xlink:href="#icon-book"/></svg>
     </div>
     <div class="bento-card-body">
       <h3>بطاقات الاسترجاع الذكي 3D</h3>
@@ -395,7 +466,7 @@
   <div class="bento-showcase-card spotlight-card journey-bento">
     <div class="bento-card-header">
       <div class="bento-tag">[ 28-DAY ARCHITECTURE ]</div>
-      <span style="font-size:16px;">🔥</span>
+      <svg class="feather-icon bento-icon"><use xlink:href="#icon-compass"/></svg>
     </div>
     <div class="bento-card-body">
       <h3>بناء نظام التركيز المستمر</h3>
@@ -415,8 +486,6 @@
     </div>
   </div>
 </div>
-</div>
-
 
 <div class="section-heading compact-heading">
 <div><div class="eyebrow">THE SYSTEM AT A GLANCE</div><h2>المساحة كلها في نظرة واحدة</h2></div>
@@ -444,18 +513,18 @@
     <div class="workflow-hub-title">
       <div class="hub-icon">⚡</div>
       <div>
-        <div class="eyebrow" style="margin-bottom:0;">THE OPERATING PIPELINE // مسار العمل التفاعلي</div>
+        <div class="eyebrow" >THE OPERATING PIPELINE // مسار العمل التفاعلي</div>
         <h3>محرك سير العمل الذكي</h3>
         <p>اختر مسارك لتنشيط الخطوات التكتيكية، تشغيل الأدوات، ومتابعة الإنجاز لحظياً.</p>
       </div>
     </div>
     <div class="flow-mode-switch" id="flowModeSwitch">
       <button class="flow-mode-btn active" id="btnStudentFlow" data-flow="student">
-        <span>🎓</span>
+        <svg class="feather-icon"><use xlink:href="#icon-graduation"/></svg>
         <span>مسار الطالب والشباب</span>
       </button>
       <button class="flow-mode-btn" id="btnCreatorFlow" data-flow="creator">
-        <span>✦</span>
+        <svg class="feather-icon"><use xlink:href="#icon-zap"/></svg>
         <span>مسار الماستري والصانع</span>
       </button>
     </div>
@@ -500,9 +569,9 @@
             <div class="student-avatar-box">
               <div class="student-avatar" id="studentAvatar">🦁</div>
               <div class="student-title-box">
-                <div style="display:flex; align-items:center; gap:8px;">
-                  <span class="panel-kicker" style="color:var(--amber); margin-bottom:0;">STUDENT MASTERY HUB</span>
-                  <span class="badge" style="background:rgba(245, 158, 11, 0.2); color:#fbbf24; border:1px solid rgba(245,158,11,0.4);" id="studentLevelTag">المستوى 3</span>
+                <div class="student-title-flex">
+                  <span class="panel-kicker" class="student-kicker-accent">STUDENT MASTERY HUB</span>
+                  <span class="badge" class="badge-level" id="studentLevelTag">المستوى 3</span>
                 </div>
                 <h2 id="studentTitle">وحش المذاكرة والعمل العميق</h2>
                 <p>أنت تبني انضباطك الأكاديمي والمهني خطوة بخطوة بعيداً عن وهم التشتت والدوبامين الرخيص.</p>
@@ -586,7 +655,7 @@
 <input class="field" name="title" placeholder="ما الشيء الذي تريد إغلاقه؟" required=""/>
 <div class="form-row"><select class="field" name="stage"><option>Capture</option><option>Clarify</option><option>Select</option><option>Define</option><option>Plan</option><option>Prepare</option><option>Execute</option><option>Close</option><option>Review</option></select><select class="field" name="priority"><option value="medium">متوسطة</option><option value="high">عالية</option><option value="low">منخفضة</option></select><input class="field" name="due" type="date"/></div>
 <textarea class="field" name="next" placeholder="الخطوة التالية القابلة للتنفيذ..." rows="2"></textarea>
-<button class="btn btn-primary" type="submit">إضافة إلى مساحة التنفيذ <span>↗</span></button>
+<button class="btn btn-primary" type="submit">إضافة إلى مساحة التنفيذ <svg class="feather-icon"><use xlink:href="#icon-compass"/></svg></button>
 </form>
 <div class="task-filters"><button class="chip active" data-taskfilter="open">المفتوحة</button><button class="chip" data-taskfilter="all">الكل</button><button class="chip" data-taskfilter="done">المغلقة</button></div>
 <div class="task-list" id="taskList"></div>
@@ -626,42 +695,16 @@
 <div class="settings-grid"><div class="panel"><span class="panel-kicker">PORTABILITY</span><h3>نسخة احتياطية من بياناتك</h3><p>صدّر المهام والتقدم والملاحظات وإعدادات الرحلة في ملف JSON، ثم استورده في جهاز آخر.</p><div class="button-row"><button class="btn btn-primary" id="exportData">تصدير بياناتي JSON ↓</button><label class="btn btn-secondary file-button">استيراد JSON ↑<input accept="application/json" id="importData" type="file"/></label></div><div class="inline-feedback" id="dataStatus"></div></div><div class="panel"><span class="panel-kicker">PRIVACY</span><h3>بياناتك لا تتزامن تلقائيًا</h3><ul class="plain-list"><li>لا يوجد تسجيل دخول أو حساب.</li><li>المهام والملاحظات والتقدم في localStorage.</li><li>ملفات المصادر ثابتة داخل نسخة البرنامج.</li><li>المؤشرات الفعلية لا تُرسل إلى أي جهة.</li></ul></div><div class="panel danger-zone"><span class="panel-kicker">RESET</span><h3>إعادة ضبط المساحة</h3><p>يمسح هذا الإجراء بياناتك الشخصية المحلية فقط. لا يحذف ملفات المصادر الأصلية من الحزمة.</p><button class="btn btn-danger" id="resetData">مسح بياناتي المحلية</button></div><div class="panel"><span class="panel-kicker">ABOUT THIS RELEASE</span><h3>حدود النسخة الحالية</h3><p>نسخة محلية قابلة للاستخدام والتطوير. لا يوجد نشر عام أو ربط بمؤسسة أو حسابات مستخدمين أو مزامنة سحابية أو تنبيهات تلقائية.</p><p class="muted-text">الإصدار 1.0.0 · 10 نوفمبر 2026</p></div></div>
 </section>
 
-<nav class="sol-floating-dock" id="solFloatingDock">
-  <button class="dock-pill-btn active" id="dockWorkflowBtn" title="محرك سير العمل التفاعلي">
-    <span class="dock-icon">⚡</span>
-    <span class="dock-label">سير العمل</span>
-  </button>
-  <div class="dock-divider"></div>
-  <button class="dock-pill-btn" id="dockAudioBtn" title="تشغيل أصوات التركيز 40Hz">
-    <span class="dock-soundwave" id="dockSoundwave"><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i></span>
-    <span class="dock-label" id="dockAudioLabel">الصوت الحي</span>
-  </button>
-  <button class="dock-pill-btn" id="dockZenBtn" title="الوضع الصامت بدون مشتتات">
-    <span class="dock-icon">🧘</span>
-    <span class="dock-label">وضع الزن</span>
-  </button>
-  <button class="dock-pill-btn" id="dockSosBtn" title="طوارئ التسويف الفورية">
-    <span class="dock-icon">🚨</span>
-    <span class="dock-label">طوارئ SOS</span>
-  </button>
-  <div class="dock-divider"></div>
-  <button class="dock-pill-btn" id="dockSearchBtn" title="البحث السريع (⌘K)">
-    <span class="dock-icon">⌕</span>
-    <kbd>⌘K</kbd>
-  </button>
-  <button class="dock-pill-btn" id="dockThemeBtn" title="تبديل الإضاءة">
-    <span class="dock-icon">🌓</span>
-  </button>
-</nav>
+
 
 </div>
 </main>
 <div class="mobile-bottom-nav">
-<button class="mobile-nav-pill active" data-page="overview"><span>⌂</span><span>الرئيسية</span></button>
-<button class="mobile-nav-pill" data-page="student"><span>🎓</span><span>الجامعة</span></button>
-<button class="mobile-nav-pill" data-page="tools"><span>✳</span><span>الأدوات</span></button>
-<button class="mobile-nav-pill" data-page="journey"><span>↗</span><span>الرحلة</span></button>
-<button class="mobile-nav-pill" data-page="tafra"><span>✦</span><span>المحتوى</span></button>
+<button class="mobile-nav-pill active" data-page="overview"><svg class="feather-icon"><use xlink:href="#icon-home"/></svg><span>الرئيسية</span></button>
+<button class="mobile-nav-pill" data-page="student"><svg class="feather-icon"><use xlink:href="#icon-graduation"/></svg><span>الجامعة</span></button>
+<button class="mobile-nav-pill" data-page="tools"><svg class="feather-icon"><use xlink:href="#icon-tool"/></svg><span>الأدوات</span></button>
+<button class="mobile-nav-pill" data-page="journey"><svg class="feather-icon"><use xlink:href="#icon-compass"/></svg><span>الرحلة</span></button>
+<button class="mobile-nav-pill" data-page="tafra"><svg class="feather-icon"><use xlink:href="#icon-zap"/></svg><span>المحتوى</span></button>
 </div></div>
 <div aria-hidden="true" class="modal-backdrop" id="toolModal"><div aria-labelledby="modalTitle" aria-modal="true" class="modal-window" role="dialog"><div class="modal-header"><div><span class="panel-kicker">FOCUS TOOLS / INTERACTIVE</span><h2 id="modalTitle">أداة</h2><p id="modalDescription"></p></div><button aria-label="إغلاق" class="icon-button close-modal" id="closeModal">×</button></div><div class="modal-body" id="modalBody"></div><div class="modal-footer"><span>كل النتائج إرشادية تعليمية وليست تشخيصًا أو علاجًا.</span><button class="btn btn-secondary" id="closeModal2">إغلاق</button></div></div></div>
 <div aria-live="polite" class="toast" id="toast" role="status"></div>
@@ -673,13 +716,13 @@
 <div class="teleprompter-overlay" id="teleprompterModal">
 <div class="prompter-header">
 <div>
-<span class="badge" style="background:#0284c7; color:#fff;">TELEPROMPTER</span>
-<h3 id="prompterTitle" style="display:inline; margin-right:10px; color:#fff;">ملقن الكاميرا لصناعة المحتوى</h3>
+<span class="badge" class="badge-teleprompter">TELEPROMPTER</span>
+<h3 id="prompterTitle" class="prompter-title-inline">ملقن الكاميرا لصناعة المحتوى</h3>
 </div>
-<div style="display:flex; align-items:center; gap:12px;">
+<div class="prompter-controls-row">
 <button class="btn btn-secondary" id="prompterMirrorBtn">🪞 قلب الشاشة (سيلفي)</button>
-<label style="color:#fff; font-size:12px;">السرعة: <input id="prompterSpeed" max="8" min="1" type="range" value="3"/></label>
-<label style="color:#fff; font-size:12px;">حجم الخط: <input id="prompterFontSize" max="60" min="20" type="range" value="34"/></label>
+<label class="prompter-control-label">السرعة: <input id="prompterSpeed" max="8" min="1" type="range" value="3"/></label>
+<label class="prompter-control-label">حجم الخط: <input id="prompterFontSize" max="60" min="20" type="range" value="34"/></label>
 <button class="btn btn-primary" id="prompterPlayBtn">▶️ تشغيل</button>
 <button class="btn btn-danger" id="prompterCloseBtn">✕ إغلاق</button>
 </div>
@@ -689,22 +732,18 @@
 </div>
 </div>
 <div class="zen-overlay" id="zenModal">
-<div style="padding:20px; display:flex; justify-content:space-between; align-items:center;">
-<span class="badge" style="background:rgba(16,185,129,0.2); color:#10b981; border:1px solid #10b981;">ZEN STUDY MODE</span>
+<div class="zen-header-bar">
+<span class="badge" class="badge-zen">ZEN STUDY MODE</span>
 <button class="btn btn-secondary" id="closeZenBtn">خروج من وضع الزن (ESC)</button>
 </div>
 <div class="zen-timer-wrap">
 <div class="zen-digits" id="zenDigits">25:00</div>
 <div class="zen-task-title" id="zenTaskTitle">المهمة الحالية قيد الإنجاز</div>
-<div style="margin-top:25px; display:flex; gap:12px;">
+<div class="zen-timer-actions">
 <button class="btn-timer-primary" id="zenToggleBtn">▶️ تشغيل</button>
 <button class="btn-timer-secondary" id="zenResetBtn">🔄 إعادة ضبط</button>
 </div>
 </div>
 </div>
-<script src="assets/three.min.js"></script>
-<script src="assets/hero_shader.js"></script>
-<script src="assets/radial_nav.js"></script>
-<script src="assets/three_bento.js"></script>
 <script src="assets/student-hub.js"></script></body>
 </html>
