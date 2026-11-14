@@ -2427,7 +2427,10 @@ a:hover {
   overflow: hidden !important;
 }
 
-.teleprompter-overlay.open, .zen-overlay.open {
+.teleprompter-overlay.open,
+.teleprompter-overlay.active,
+.zen-overlay.open,
+.zen-overlay.active {
   display: flex !important;
 }
 

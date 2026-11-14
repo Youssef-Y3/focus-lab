@@ -549,6 +549,9 @@
     else if (activeTab === "career") container.innerHTML = renderCareerHTML();
 
     bindStudentHubEvents(activeTab);
+    if (activeTab === "study") {
+      updateStudyTimerUI();
+    }
   }
   window.renderStudentHub = renderStudentHub;
 
@@ -795,7 +798,8 @@
   };
 
   window.switchStudentTab = function(tabName) {
-    audio.playClick();
+    if (audio) audio.playClick();
+    if (window.APP?.openPage) window.APP.openPage("student");
     const s = getStudentState();
     s.activeSubTab = tabName;
     saveStudentState(s);
@@ -1363,7 +1367,7 @@
     audio.playClick();
     const modal = document.getElementById("zenModal");
     if (!modal) return;
-    modal.classList.add("active");
+    modal.classList.add("active", "open");
 
     const input = document.getElementById("studyTaskInput");
     const zenTitle = document.getElementById("zenTaskTitle");
@@ -1376,7 +1380,7 @@
   function closeZenMode() {
     audio.playClick();
     const modal = document.getElementById("zenModal");
-    if (modal) modal.classList.remove("active");
+    if (modal) modal.classList.remove("active", "open");
   }
 
   // =========================================================================
@@ -1394,7 +1398,7 @@
 
     if (titleEl) titleEl.textContent = title || "ملقن الكاميرا";
     textEl.innerHTML = text.replace(/\n/g, "<br><br>");
-    modal.classList.add("active");
+    modal.classList.add("active", "open");
   }
   window.openTeleprompter = openTeleprompter;
 
@@ -1975,7 +1979,7 @@
     const pClose = document.getElementById("prompterCloseBtn");
     if (pClose) pClose.onclick = () => {
       audio.playClick();
-      document.getElementById("teleprompterModal")?.classList.remove("active");
+      document.getElementById("teleprompterModal")?.classList.remove("active", "open");
       if (prompterRunning) togglePrompterScroll();
     };
 
@@ -1998,7 +2002,7 @@
     document.addEventListener("keydown", e => {
       if (e.key === "Escape") {
         closeZenMode();
-        document.getElementById("teleprompterModal")?.classList.remove("active");
+        document.getElementById("teleprompterModal")?.classList.remove("active", "open");
         if (prompterRunning) togglePrompterScroll();
       }
     });
