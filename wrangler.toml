@@ -1,0 +1,8 @@
+name = "focus-lab"
+compatibility_date = "2026-11-01"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "focus-lab-db"
+database_id = "48bf1980-0157-43be-bf1a-99bb150f98ee"

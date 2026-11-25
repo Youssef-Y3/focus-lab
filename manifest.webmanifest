@@ -1,0 +1,21 @@
+{
+  "name": "منصة التركيز والماستري للشباب | FOCUS LAB",
+  "short_name": "FOCUS LAB",
+  "description": "نظام التركيز والماستري الأكاديمي والمهني للشباب والجامعات (100% يعمل محلياً بدون اتصال)",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#06080e",
+  "theme_color": "#06080e",
+  "dir": "rtl",
+  "lang": "ar",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2306080e'/><circle cx='50' cy='50' r='36' stroke='%2300b4d8' stroke-width='6' fill='none'/><circle cx='50' cy='50' r='14' fill='%23ff6b35'/></svg>",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
